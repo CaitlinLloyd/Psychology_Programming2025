@@ -1,0 +1,3773 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Python Session 2 &#8212; Jupyter Book for Psychology Programming Course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'python_week2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Python Session 1" href="python_week1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Jupyter Book for Psychology Programming Course - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Jupyter Book for Psychology Programming Course - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Welcome!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_week1.html">Python Session 1</a></li>
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Python Session 2</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/CaitlinLloyd/Programming_for_Psychology/blob/master/python_week2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/CaitlinLloyd/Programming_for_Psychology" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/CaitlinLloyd/Programming_for_Psychology/issues/new?title=Issue%20on%20page%20%2Fpython_week2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/python_week2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python Session 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Session 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-tasks-below-and-paste-upload-solution-to-github">Complete tasks below and paste upload solution to Github</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-session-2">
+<h1>Python Session 2<a class="headerlink" href="#python-session-2" title="Link to this heading">#</a></h1>
+<p>Now we are going to practice some analyses with our data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load in our choice and demographic data</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/emilylloyd/Documents/Coding Course/demo.csv&quot;</span><span class="p">)</span>
+<span class="n">choices</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/emilylloyd/Documents/Coding Course/FCT_df.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">choices</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now summarize the means and reaction times for foods varying in fat and sugar</span>
+
+<span class="c1">#Now let&#39;s create a new dataframe and store each persons average RT and rating for high and low fat foods</span>
+
+<span class="c1"># Group by participant, block, and fat level</span>
+<span class="n">summary_df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_merged</span>
+    <span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;reaction_time&#39;</span><span class="p">])</span>  <span class="c1"># Exclude trials with missing values</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;block&#39;</span><span class="p">,</span> <span class="s1">&#39;fat&#39;</span><span class="p">,</span><span class="s1">&#39;sugar&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+        <span class="n">average_rating</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">),</span>
+        <span class="n">average_reaction_time</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">),</span>
+        <span class="n">trial_count</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">)</span>  <span class="c1"># Optional: to see how many valid trials per group</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">summary_df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ID   block   fat sugar  average_rating  average_reaction_time  trial_count
+0   1  choice  high  high        5.333333               1.997333           15
+1   1  choice  high   low        6.055556               2.148889           18
+2   1  choice   low  high        5.576923               2.175769           26
+3   1  choice   low   low        5.312500               2.511875           16
+4   1  health  high  high        4.888889               1.976667           18
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pivot to wide format</span>
+<span class="n">df_wide</span>  <span class="o">=</span> <span class="n">summary_df</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+    <span class="n">index</span><span class="o">=</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;block&#39;</span><span class="p">,</span> <span class="s1">&#39;fat&#39;</span><span class="p">,</span><span class="s1">&#39;sugar&#39;</span><span class="p">],</span>
+    <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;average_rating&#39;</span><span class="p">,</span> <span class="s1">&#39;average_reaction_time&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+
+
+
+<span class="c1"># Flatten the column names</span>
+<span class="n">df_wide</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">block</span><span class="si">}</span><span class="s2">_fat</span><span class="si">{</span><span class="n">fat</span><span class="si">}</span><span class="s2">_sugar</span><span class="si">{</span><span class="n">sugar</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">for</span> <span class="n">val</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">fat</span><span class="p">,</span> <span class="n">sugar</span> <span class="ow">in</span> <span class="n">df_wide</span><span class="o">.</span><span class="n">columns</span>
+<span class="p">]</span>
+
+<span class="n">df_wide</span> <span class="o">=</span> <span class="n">df_wide</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_wide</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ID  average_rating_choice_fathigh_sugarhigh  \
+0   1                                 5.333333   
+1   2                                 4.714286   
+2   3                                 5.421053   
+3   4                                 4.882353   
+4   5                                 5.444444   
+
+   average_rating_choice_fathigh_sugarlow  \
+0                                6.055556   
+1                                6.352941   
+2                                5.000000   
+3                                4.461538   
+4                                5.357143   
+
+   average_rating_choice_fatlow_sugarhigh  \
+0                                5.576923   
+1                                4.800000   
+2                                6.050000   
+3                                5.259259   
+4                                5.421053   
+
+   average_rating_choice_fatlow_sugarlow  \
+0                               5.312500   
+1                               5.050000   
+2                               5.916667   
+3                               6.312500   
+4                               5.217391   
+
+   average_rating_health_fathigh_sugarhigh  \
+0                                 4.888889   
+1                                 5.315789   
+2                                 4.222222   
+3                                 5.833333   
+4                                 6.142857   
+
+   average_rating_health_fathigh_sugarlow  \
+0                                6.411765   
+1                                4.125000   
+2                                6.684211   
+3                                5.352941   
+4                                6.142857   
+
+   average_rating_health_fatlow_sugarhigh  \
+0                                5.913043   
+1                                5.913043   
+2                                6.200000   
+3                                6.750000   
+4                                5.541667   
+
+   average_rating_health_fatlow_sugarlow  \
+0                               5.066667   
+1                               4.875000   
+2                               5.600000   
+3                               6.222222   
+4                               5.695652   
+
+   average_rating_taste_fathigh_sugarhigh  ...  \
+0                                5.466667  ...   
+1                                5.388889  ...   
+2                                5.500000  ...   
+3                                5.869565  ...   
+4                                5.333333  ...   
+
+   average_reaction_time_choice_fatlow_sugarhigh  \
+0                                       2.175769   
+1                                       2.439000   
+2                                       2.476500   
+3                                       2.267037   
+4                                       2.062632   
+
+   average_reaction_time_choice_fatlow_sugarlow  \
+0                                      2.511875   
+1                                      2.123000   
+2                                      2.435417   
+3                                      2.182500   
+4                                      2.337826   
+
+   average_reaction_time_health_fathigh_sugarhigh  \
+0                                        1.976667   
+1                                        2.256316   
+2                                        1.810000   
+3                                        2.307778   
+4                                        2.427857   
+
+   average_reaction_time_health_fathigh_sugarlow  \
+0                                       1.978235   
+1                                       2.758750   
+2                                       2.247368   
+3                                       2.170588   
+4                                       2.234286   
+
+   average_reaction_time_health_fatlow_sugarhigh  \
+0                                       1.944348   
+1                                       2.086522   
+2                                       2.176000   
+3                                       2.108500   
+4                                       2.555833   
+
+   average_reaction_time_health_fatlow_sugarlow  \
+0                                      2.838667   
+1                                      2.295833   
+2                                      2.136400   
+3                                      2.018333   
+4                                      2.189130   
+
+   average_reaction_time_taste_fathigh_sugarhigh  \
+0                                       2.131333   
+1                                       2.171111   
+2                                       2.181875   
+3                                       2.093043   
+4                                       2.252667   
+
+   average_reaction_time_taste_fathigh_sugarlow  \
+0                                      2.360667   
+1                                      2.287143   
+2                                      2.464545   
+3                                      2.081000   
+4                                      1.963636   
+
+   average_reaction_time_taste_fatlow_sugarhigh  \
+0                                      2.097000   
+1                                      2.273500   
+2                                      2.211579   
+3                                      1.867000   
+4                                      2.265455   
+
+   average_reaction_time_taste_fatlow_sugarlow  
+0                                     2.208000  
+1                                     2.128182  
+2                                     2.096667  
+3                                     2.108500  
+4                                     2.099630  
+
+[5 rows x 25 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now select some columns from the demographic frame and merge with our wide_df</span>
+<span class="n">demo_sub</span><span class="o">=</span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span><span class="s1">&#39;Patient&#39;</span><span class="p">,</span><span class="s1">&#39;BMI&#39;</span><span class="p">,</span><span class="s1">&#39;EDE Score&#39;</span><span class="p">,</span><span class="s1">&#39;Age&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demo_sub</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">demo_sub</span><span class="p">,</span><span class="n">df_wide</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demo_sub</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>Patient</th>
+      <th>BMI</th>
+      <th>EDE Score</th>
+      <th>Age</th>
+      <th>average_rating_choice_fathigh_sugarhigh</th>
+      <th>average_rating_choice_fathigh_sugarlow</th>
+      <th>average_rating_choice_fatlow_sugarhigh</th>
+      <th>average_rating_choice_fatlow_sugarlow</th>
+      <th>average_rating_health_fathigh_sugarhigh</th>
+      <th>...</th>
+      <th>average_reaction_time_choice_fatlow_sugarhigh</th>
+      <th>average_reaction_time_choice_fatlow_sugarlow</th>
+      <th>average_reaction_time_health_fathigh_sugarhigh</th>
+      <th>average_reaction_time_health_fathigh_sugarlow</th>
+      <th>average_reaction_time_health_fatlow_sugarhigh</th>
+      <th>average_reaction_time_health_fatlow_sugarlow</th>
+      <th>average_reaction_time_taste_fathigh_sugarhigh</th>
+      <th>average_reaction_time_taste_fathigh_sugarlow</th>
+      <th>average_reaction_time_taste_fatlow_sugarhigh</th>
+      <th>average_reaction_time_taste_fatlow_sugarlow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Yes</td>
+      <td>17.9</td>
+      <td>4.9</td>
+      <td>56</td>
+      <td>5.333333</td>
+      <td>6.055556</td>
+      <td>5.576923</td>
+      <td>5.312500</td>
+      <td>4.888889</td>
+      <td>...</td>
+      <td>2.175769</td>
+      <td>2.511875</td>
+      <td>1.976667</td>
+      <td>1.978235</td>
+      <td>1.944348</td>
+      <td>2.838667</td>
+      <td>2.131333</td>
+      <td>2.360667</td>
+      <td>2.097000</td>
+      <td>2.208000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Yes</td>
+      <td>18.6</td>
+      <td>5.3</td>
+      <td>46</td>
+      <td>4.714286</td>
+      <td>6.352941</td>
+      <td>4.800000</td>
+      <td>5.050000</td>
+      <td>5.315789</td>
+      <td>...</td>
+      <td>2.439000</td>
+      <td>2.123000</td>
+      <td>2.256316</td>
+      <td>2.758750</td>
+      <td>2.086522</td>
+      <td>2.295833</td>
+      <td>2.171111</td>
+      <td>2.287143</td>
+      <td>2.273500</td>
+      <td>2.128182</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>No</td>
+      <td>22.3</td>
+      <td>0.6</td>
+      <td>32</td>
+      <td>5.421053</td>
+      <td>5.000000</td>
+      <td>6.050000</td>
+      <td>5.916667</td>
+      <td>4.222222</td>
+      <td>...</td>
+      <td>2.476500</td>
+      <td>2.435417</td>
+      <td>1.810000</td>
+      <td>2.247368</td>
+      <td>2.176000</td>
+      <td>2.136400</td>
+      <td>2.181875</td>
+      <td>2.464545</td>
+      <td>2.211579</td>
+      <td>2.096667</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>No</td>
+      <td>22.9</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>4.882353</td>
+      <td>4.461538</td>
+      <td>5.259259</td>
+      <td>6.312500</td>
+      <td>5.833333</td>
+      <td>...</td>
+      <td>2.267037</td>
+      <td>2.182500</td>
+      <td>2.307778</td>
+      <td>2.170588</td>
+      <td>2.108500</td>
+      <td>2.018333</td>
+      <td>2.093043</td>
+      <td>2.081000</td>
+      <td>1.867000</td>
+      <td>2.108500</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Yes</td>
+      <td>15.7</td>
+      <td>4.1</td>
+      <td>25</td>
+      <td>5.444444</td>
+      <td>5.357143</td>
+      <td>5.421053</td>
+      <td>5.217391</td>
+      <td>6.142857</td>
+      <td>...</td>
+      <td>2.062632</td>
+      <td>2.337826</td>
+      <td>2.427857</td>
+      <td>2.234286</td>
+      <td>2.555833</td>
+      <td>2.189130</td>
+      <td>2.252667</td>
+      <td>1.963636</td>
+      <td>2.265455</td>
+      <td>2.099630</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>Yes</td>
+      <td>17.2</td>
+      <td>3.5</td>
+      <td>38</td>
+      <td>6.647059</td>
+      <td>6.400000</td>
+      <td>5.666667</td>
+      <td>4.750000</td>
+      <td>5.928571</td>
+      <td>...</td>
+      <td>2.444444</td>
+      <td>2.656250</td>
+      <td>2.175000</td>
+      <td>2.060000</td>
+      <td>2.025000</td>
+      <td>2.566500</td>
+      <td>2.400952</td>
+      <td>2.225000</td>
+      <td>2.108000</td>
+      <td>2.526316</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>Yes</td>
+      <td>18.7</td>
+      <td>4.6</td>
+      <td>56</td>
+      <td>6.647059</td>
+      <td>5.214286</td>
+      <td>6.285714</td>
+      <td>5.318182</td>
+      <td>5.000000</td>
+      <td>...</td>
+      <td>1.920952</td>
+      <td>2.303636</td>
+      <td>2.341000</td>
+      <td>2.266923</td>
+      <td>2.211304</td>
+      <td>2.291053</td>
+      <td>2.748889</td>
+      <td>2.758667</td>
+      <td>2.316522</td>
+      <td>1.485882</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>Yes</td>
+      <td>17.2</td>
+      <td>4.2</td>
+      <td>36</td>
+      <td>6.076923</td>
+      <td>6.294118</td>
+      <td>5.375000</td>
+      <td>5.684211</td>
+      <td>5.076923</td>
+      <td>...</td>
+      <td>2.215833</td>
+      <td>2.490526</td>
+      <td>2.083846</td>
+      <td>2.222500</td>
+      <td>1.908333</td>
+      <td>2.111429</td>
+      <td>2.855625</td>
+      <td>2.147500</td>
+      <td>2.400000</td>
+      <td>1.908421</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>No</td>
+      <td>22.0</td>
+      <td>1.7</td>
+      <td>40</td>
+      <td>6.444444</td>
+      <td>7.000000</td>
+      <td>4.333333</td>
+      <td>5.958333</td>
+      <td>5.409091</td>
+      <td>...</td>
+      <td>1.991250</td>
+      <td>2.411667</td>
+      <td>2.359091</td>
+      <td>2.022857</td>
+      <td>1.825652</td>
+      <td>2.031333</td>
+      <td>2.254286</td>
+      <td>2.166154</td>
+      <td>2.113333</td>
+      <td>2.449565</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>No</td>
+      <td>22.8</td>
+      <td>0.2</td>
+      <td>28</td>
+      <td>5.000000</td>
+      <td>4.473684</td>
+      <td>7.000000</td>
+      <td>6.357143</td>
+      <td>5.500000</td>
+      <td>...</td>
+      <td>2.410588</td>
+      <td>2.347143</td>
+      <td>2.125000</td>
+      <td>2.693158</td>
+      <td>2.651176</td>
+      <td>2.317692</td>
+      <td>2.486842</td>
+      <td>2.321739</td>
+      <td>2.087917</td>
+      <td>2.232222</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11</td>
+      <td>No</td>
+      <td>24.9</td>
+      <td>1.9</td>
+      <td>28</td>
+      <td>4.800000</td>
+      <td>6.857143</td>
+      <td>5.062500</td>
+      <td>5.400000</td>
+      <td>5.444444</td>
+      <td>...</td>
+      <td>2.731250</td>
+      <td>2.392000</td>
+      <td>2.456667</td>
+      <td>2.809412</td>
+      <td>2.409048</td>
+      <td>1.990833</td>
+      <td>2.138235</td>
+      <td>2.233846</td>
+      <td>2.383500</td>
+      <td>2.199200</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>Yes</td>
+      <td>17.2</td>
+      <td>3.7</td>
+      <td>41</td>
+      <td>6.117647</td>
+      <td>5.611111</td>
+      <td>5.937500</td>
+      <td>6.863636</td>
+      <td>6.000000</td>
+      <td>...</td>
+      <td>2.353750</td>
+      <td>2.533636</td>
+      <td>2.211667</td>
+      <td>1.966667</td>
+      <td>2.378750</td>
+      <td>2.270000</td>
+      <td>2.383333</td>
+      <td>2.443462</td>
+      <td>1.912778</td>
+      <td>2.181667</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13</td>
+      <td>Yes</td>
+      <td>18.5</td>
+      <td>3.5</td>
+      <td>53</td>
+      <td>5.937500</td>
+      <td>4.692308</td>
+      <td>6.105263</td>
+      <td>5.772727</td>
+      <td>5.846154</td>
+      <td>...</td>
+      <td>2.336316</td>
+      <td>1.979545</td>
+      <td>2.470000</td>
+      <td>2.340000</td>
+      <td>2.436000</td>
+      <td>2.357368</td>
+      <td>2.412857</td>
+      <td>2.666250</td>
+      <td>1.945714</td>
+      <td>2.487727</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>14</td>
+      <td>Yes</td>
+      <td>15.9</td>
+      <td>3.8</td>
+      <td>57</td>
+      <td>6.000000</td>
+      <td>5.434783</td>
+      <td>5.722222</td>
+      <td>5.666667</td>
+      <td>4.736842</td>
+      <td>...</td>
+      <td>2.036111</td>
+      <td>2.494286</td>
+      <td>2.596316</td>
+      <td>2.059444</td>
+      <td>2.185263</td>
+      <td>2.383333</td>
+      <td>2.443846</td>
+      <td>1.822000</td>
+      <td>2.088636</td>
+      <td>1.975789</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>15</td>
+      <td>No</td>
+      <td>21.8</td>
+      <td>2.2</td>
+      <td>41</td>
+      <td>5.875000</td>
+      <td>6.312500</td>
+      <td>5.650000</td>
+      <td>4.666667</td>
+      <td>6.529412</td>
+      <td>...</td>
+      <td>2.168000</td>
+      <td>2.502381</td>
+      <td>2.664706</td>
+      <td>2.417143</td>
+      <td>2.229474</td>
+      <td>2.131200</td>
+      <td>2.136957</td>
+      <td>2.173333</td>
+      <td>2.323889</td>
+      <td>2.484286</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>16</td>
+      <td>Yes</td>
+      <td>16.9</td>
+      <td>4.5</td>
+      <td>20</td>
+      <td>5.095238</td>
+      <td>6.071429</td>
+      <td>4.909091</td>
+      <td>4.941176</td>
+      <td>5.863636</td>
+      <td>...</td>
+      <td>2.108182</td>
+      <td>2.170000</td>
+      <td>2.050455</td>
+      <td>2.428333</td>
+      <td>2.462857</td>
+      <td>2.211500</td>
+      <td>2.550000</td>
+      <td>2.628000</td>
+      <td>1.892105</td>
+      <td>2.623684</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>17</td>
+      <td>Yes</td>
+      <td>15.9</td>
+      <td>4.9</td>
+      <td>39</td>
+      <td>4.666667</td>
+      <td>5.833333</td>
+      <td>5.235294</td>
+      <td>4.772727</td>
+      <td>5.826087</td>
+      <td>...</td>
+      <td>1.972353</td>
+      <td>2.211364</td>
+      <td>2.511739</td>
+      <td>2.242941</td>
+      <td>2.388000</td>
+      <td>2.170526</td>
+      <td>2.161500</td>
+      <td>2.334737</td>
+      <td>2.375625</td>
+      <td>2.125556</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18</td>
+      <td>No</td>
+      <td>29.4</td>
+      <td>0.9</td>
+      <td>19</td>
+      <td>6.133333</td>
+      <td>5.611111</td>
+      <td>6.684211</td>
+      <td>5.590909</td>
+      <td>4.818182</td>
+      <td>...</td>
+      <td>1.860000</td>
+      <td>2.137727</td>
+      <td>1.983636</td>
+      <td>2.122609</td>
+      <td>2.217000</td>
+      <td>1.963000</td>
+      <td>2.120000</td>
+      <td>1.986842</td>
+      <td>1.780000</td>
+      <td>2.516957</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>19</td>
+      <td>Yes</td>
+      <td>16.2</td>
+      <td>4.4</td>
+      <td>41</td>
+      <td>5.461538</td>
+      <td>6.095238</td>
+      <td>4.761905</td>
+      <td>6.789474</td>
+      <td>6.444444</td>
+      <td>...</td>
+      <td>2.258095</td>
+      <td>2.746316</td>
+      <td>2.626667</td>
+      <td>2.073529</td>
+      <td>2.129600</td>
+      <td>1.956250</td>
+      <td>1.950500</td>
+      <td>1.751875</td>
+      <td>2.004000</td>
+      <td>2.468125</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20</td>
+      <td>No</td>
+      <td>25.3</td>
+      <td>0.7</td>
+      <td>61</td>
+      <td>4.941176</td>
+      <td>5.166667</td>
+      <td>5.681818</td>
+      <td>5.478261</td>
+      <td>5.470588</td>
+      <td>...</td>
+      <td>2.342273</td>
+      <td>2.385652</td>
+      <td>2.473529</td>
+      <td>2.084167</td>
+      <td>1.907500</td>
+      <td>2.259545</td>
+      <td>2.172857</td>
+      <td>2.260714</td>
+      <td>2.557500</td>
+      <td>2.074783</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>21</td>
+      <td>Yes</td>
+      <td>16.7</td>
+      <td>4.5</td>
+      <td>47</td>
+      <td>5.444444</td>
+      <td>4.928571</td>
+      <td>4.700000</td>
+      <td>4.545455</td>
+      <td>5.615385</td>
+      <td>...</td>
+      <td>2.636500</td>
+      <td>2.121364</td>
+      <td>2.278462</td>
+      <td>2.453077</td>
+      <td>2.665455</td>
+      <td>2.458077</td>
+      <td>2.292778</td>
+      <td>2.973077</td>
+      <td>2.365652</td>
+      <td>2.295263</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>22</td>
+      <td>Yes</td>
+      <td>16.9</td>
+      <td>4.9</td>
+      <td>55</td>
+      <td>4.466667</td>
+      <td>6.000000</td>
+      <td>6.000000</td>
+      <td>5.833333</td>
+      <td>5.200000</td>
+      <td>...</td>
+      <td>2.232333</td>
+      <td>2.763889</td>
+      <td>2.500000</td>
+      <td>1.596667</td>
+      <td>2.502000</td>
+      <td>2.231667</td>
+      <td>2.675500</td>
+      <td>1.999231</td>
+      <td>1.959000</td>
+      <td>2.028421</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>23</td>
+      <td>No</td>
+      <td>24.1</td>
+      <td>2.0</td>
+      <td>19</td>
+      <td>5.333333</td>
+      <td>6.357143</td>
+      <td>6.285714</td>
+      <td>5.400000</td>
+      <td>5.650000</td>
+      <td>...</td>
+      <td>2.455238</td>
+      <td>2.280800</td>
+      <td>2.082000</td>
+      <td>2.391875</td>
+      <td>2.440500</td>
+      <td>2.344737</td>
+      <td>2.001579</td>
+      <td>2.370714</td>
+      <td>2.287500</td>
+      <td>2.142273</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>24</td>
+      <td>No</td>
+      <td>20.6</td>
+      <td>-0.1</td>
+      <td>38</td>
+      <td>5.529412</td>
+      <td>7.200000</td>
+      <td>5.428571</td>
+      <td>5.050000</td>
+      <td>6.333333</td>
+      <td>...</td>
+      <td>2.207619</td>
+      <td>2.155000</td>
+      <td>2.448333</td>
+      <td>2.278000</td>
+      <td>2.185556</td>
+      <td>2.048696</td>
+      <td>2.264500</td>
+      <td>2.389000</td>
+      <td>2.231500</td>
+      <td>1.970000</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>25</td>
+      <td>Yes</td>
+      <td>16.7</td>
+      <td>5.8</td>
+      <td>50</td>
+      <td>5.611111</td>
+      <td>5.083333</td>
+      <td>5.461538</td>
+      <td>5.900000</td>
+      <td>4.600000</td>
+      <td>...</td>
+      <td>1.874615</td>
+      <td>2.424333</td>
+      <td>2.447000</td>
+      <td>1.802500</td>
+      <td>1.712500</td>
+      <td>2.488889</td>
+      <td>2.075909</td>
+      <td>2.050000</td>
+      <td>2.146667</td>
+      <td>2.309444</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>26</td>
+      <td>No</td>
+      <td>23.2</td>
+      <td>1.3</td>
+      <td>29</td>
+      <td>4.750000</td>
+      <td>4.714286</td>
+      <td>5.363636</td>
+      <td>6.833333</td>
+      <td>4.937500</td>
+      <td>...</td>
+      <td>2.077273</td>
+      <td>2.408333</td>
+      <td>2.372500</td>
+      <td>1.832667</td>
+      <td>2.173704</td>
+      <td>2.381875</td>
+      <td>2.101538</td>
+      <td>2.420500</td>
+      <td>2.064000</td>
+      <td>2.221429</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>27</td>
+      <td>No</td>
+      <td>21.8</td>
+      <td>0.8</td>
+      <td>39</td>
+      <td>5.454545</td>
+      <td>4.882353</td>
+      <td>6.000000</td>
+      <td>4.882353</td>
+      <td>6.529412</td>
+      <td>...</td>
+      <td>2.403333</td>
+      <td>2.387059</td>
+      <td>1.591765</td>
+      <td>2.618125</td>
+      <td>2.134783</td>
+      <td>2.277368</td>
+      <td>2.154444</td>
+      <td>2.205000</td>
+      <td>2.056667</td>
+      <td>1.870500</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>28</td>
+      <td>No</td>
+      <td>21.9</td>
+      <td>0.7</td>
+      <td>61</td>
+      <td>4.812500</td>
+      <td>4.909091</td>
+      <td>5.952381</td>
+      <td>5.923077</td>
+      <td>5.363636</td>
+      <td>...</td>
+      <td>2.170952</td>
+      <td>2.043077</td>
+      <td>2.500909</td>
+      <td>1.741000</td>
+      <td>2.215238</td>
+      <td>2.347273</td>
+      <td>2.224500</td>
+      <td>2.327647</td>
+      <td>2.262105</td>
+      <td>2.439474</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>29</td>
+      <td>No</td>
+      <td>25.7</td>
+      <td>1.6</td>
+      <td>42</td>
+      <td>5.733333</td>
+      <td>5.823529</td>
+      <td>5.944444</td>
+      <td>4.500000</td>
+      <td>4.631579</td>
+      <td>...</td>
+      <td>2.193333</td>
+      <td>2.176818</td>
+      <td>2.312632</td>
+      <td>2.549130</td>
+      <td>2.908462</td>
+      <td>2.279000</td>
+      <td>2.279286</td>
+      <td>2.147222</td>
+      <td>1.950455</td>
+      <td>2.184444</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>30</td>
+      <td>No</td>
+      <td>25.5</td>
+      <td>1.1</td>
+      <td>44</td>
+      <td>7.083333</td>
+      <td>5.850000</td>
+      <td>5.692308</td>
+      <td>5.466667</td>
+      <td>4.200000</td>
+      <td>...</td>
+      <td>2.348462</td>
+      <td>1.655333</td>
+      <td>2.036000</td>
+      <td>2.093333</td>
+      <td>2.337143</td>
+      <td>1.794348</td>
+      <td>2.187368</td>
+      <td>2.377059</td>
+      <td>2.741765</td>
+      <td>2.190476</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>31</td>
+      <td>No</td>
+      <td>22.6</td>
+      <td>0.1</td>
+      <td>59</td>
+      <td>5.470588</td>
+      <td>5.733333</td>
+      <td>6.173913</td>
+      <td>5.550000</td>
+      <td>5.375000</td>
+      <td>...</td>
+      <td>2.548696</td>
+      <td>2.249000</td>
+      <td>2.400000</td>
+      <td>2.269231</td>
+      <td>2.738500</td>
+      <td>2.440000</td>
+      <td>2.344375</td>
+      <td>2.358667</td>
+      <td>2.327692</td>
+      <td>2.455625</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>32</td>
+      <td>No</td>
+      <td>23.3</td>
+      <td>1.2</td>
+      <td>45</td>
+      <td>5.916667</td>
+      <td>4.764706</td>
+      <td>5.038462</td>
+      <td>5.000000</td>
+      <td>5.952381</td>
+      <td>...</td>
+      <td>2.375000</td>
+      <td>2.354211</td>
+      <td>2.431429</td>
+      <td>2.039375</td>
+      <td>2.510625</td>
+      <td>2.711000</td>
+      <td>2.340556</td>
+      <td>2.392778</td>
+      <td>2.248571</td>
+      <td>2.654118</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>33</td>
+      <td>No</td>
+      <td>26.0</td>
+      <td>1.7</td>
+      <td>33</td>
+      <td>5.727273</td>
+      <td>5.904762</td>
+      <td>5.560000</td>
+      <td>4.941176</td>
+      <td>5.615385</td>
+      <td>...</td>
+      <td>2.328800</td>
+      <td>1.930000</td>
+      <td>2.143077</td>
+      <td>1.866000</td>
+      <td>2.345455</td>
+      <td>2.243750</td>
+      <td>2.401176</td>
+      <td>2.294500</td>
+      <td>2.454762</td>
+      <td>2.494667</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>34</td>
+      <td>No</td>
+      <td>20.6</td>
+      <td>1.5</td>
+      <td>32</td>
+      <td>4.157895</td>
+      <td>5.809524</td>
+      <td>5.500000</td>
+      <td>5.571429</td>
+      <td>4.800000</td>
+      <td>...</td>
+      <td>2.374167</td>
+      <td>2.127619</td>
+      <td>2.338000</td>
+      <td>2.798636</td>
+      <td>2.463333</td>
+      <td>2.274000</td>
+      <td>2.460625</td>
+      <td>2.212632</td>
+      <td>2.345000</td>
+      <td>2.138571</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>35</td>
+      <td>Yes</td>
+      <td>17.9</td>
+      <td>4.0</td>
+      <td>64</td>
+      <td>6.444444</td>
+      <td>5.684211</td>
+      <td>4.857143</td>
+      <td>7.176471</td>
+      <td>5.294118</td>
+      <td>...</td>
+      <td>1.917619</td>
+      <td>2.363529</td>
+      <td>2.230000</td>
+      <td>2.187778</td>
+      <td>2.378571</td>
+      <td>2.635882</td>
+      <td>2.199000</td>
+      <td>2.127143</td>
+      <td>2.534348</td>
+      <td>2.312963</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>36</td>
+      <td>Yes</td>
+      <td>19.9</td>
+      <td>3.4</td>
+      <td>61</td>
+      <td>5.000000</td>
+      <td>5.866667</td>
+      <td>5.263158</td>
+      <td>5.695652</td>
+      <td>5.333333</td>
+      <td>...</td>
+      <td>2.541579</td>
+      <td>2.403913</td>
+      <td>2.121111</td>
+      <td>2.215714</td>
+      <td>2.169474</td>
+      <td>2.520000</td>
+      <td>2.332727</td>
+      <td>1.888750</td>
+      <td>2.128571</td>
+      <td>2.361000</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>37</td>
+      <td>Yes</td>
+      <td>19.9</td>
+      <td>4.2</td>
+      <td>20</td>
+      <td>5.000000</td>
+      <td>4.187500</td>
+      <td>6.333333</td>
+      <td>4.850000</td>
+      <td>5.214286</td>
+      <td>...</td>
+      <td>2.255000</td>
+      <td>2.521500</td>
+      <td>2.154286</td>
+      <td>2.004000</td>
+      <td>2.270435</td>
+      <td>2.299565</td>
+      <td>2.084615</td>
+      <td>2.249444</td>
+      <td>2.334091</td>
+      <td>2.500952</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>38</td>
+      <td>Yes</td>
+      <td>15.2</td>
+      <td>7.1</td>
+      <td>54</td>
+      <td>6.307692</td>
+      <td>4.437500</td>
+      <td>5.217391</td>
+      <td>5.772727</td>
+      <td>4.538462</td>
+      <td>...</td>
+      <td>2.309130</td>
+      <td>2.447727</td>
+      <td>2.653846</td>
+      <td>2.342727</td>
+      <td>2.354828</td>
+      <td>2.478000</td>
+      <td>2.437826</td>
+      <td>1.769286</td>
+      <td>2.204444</td>
+      <td>2.081053</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>39</td>
+      <td>Yes</td>
+      <td>16.6</td>
+      <td>3.3</td>
+      <td>24</td>
+      <td>4.857143</td>
+      <td>4.833333</td>
+      <td>6.083333</td>
+      <td>5.416667</td>
+      <td>4.714286</td>
+      <td>...</td>
+      <td>1.645000</td>
+      <td>2.013750</td>
+      <td>2.615000</td>
+      <td>2.293333</td>
+      <td>2.116071</td>
+      <td>2.502632</td>
+      <td>1.780833</td>
+      <td>2.144545</td>
+      <td>2.045909</td>
+      <td>2.081176</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>40</td>
+      <td>Yes</td>
+      <td>17.7</td>
+      <td>3.8</td>
+      <td>38</td>
+      <td>5.583333</td>
+      <td>5.631579</td>
+      <td>4.375000</td>
+      <td>5.576923</td>
+      <td>5.923077</td>
+      <td>...</td>
+      <td>2.480000</td>
+      <td>1.867692</td>
+      <td>2.250000</td>
+      <td>2.448571</td>
+      <td>2.117778</td>
+      <td>2.473333</td>
+      <td>2.323333</td>
+      <td>2.063125</td>
+      <td>2.396000</td>
+      <td>2.034800</td>
+    </tr>
+  </tbody>
+</table>
+<p>40 rows × 29 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now let&#39;s group by patient group and calculate means of food ratings, BMI, age, EDEQ</span>
+<span class="c1"># we first need to import numpy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mean is np.mean()</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">demo_sub</span><span class="o">.</span><span class="n">BMI</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(20.252499999999998)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">ttest_ind</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now lets compare the groups using a t-test</span>
+<span class="n">vars_to_test</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]</span>
+<span class="c1"># Split the data by group</span>
+<span class="n">patients</span> <span class="o">=</span> <span class="n">demo_sub</span><span class="p">[</span><span class="n">demo_sub</span><span class="p">[</span><span class="s1">&#39;Patient&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span><span class="p">]</span>
+<span class="n">controls</span> <span class="o">=</span> <span class="n">demo_sub</span><span class="p">[</span><span class="n">demo_sub</span><span class="p">[</span><span class="s1">&#39;Patient&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;No&#39;</span><span class="p">]</span>
+
+<span class="c1"># Store results</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">vars_to_test</span><span class="p">:</span>
+    <span class="c1"># Run t-test</span>
+    <span class="n">t_stat</span><span class="p">,</span> <span class="n">p_val</span> <span class="o">=</span> <span class="n">ttest_ind</span><span class="p">(</span><span class="n">patients</span><span class="p">[</span><span class="n">var</span><span class="p">],</span> <span class="n">controls</span><span class="p">[</span><span class="n">var</span><span class="p">],</span> <span class="n">equal_var</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># Welch&#39;s t-test</span>
+    
+    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="n">var</span><span class="p">,</span>
+        <span class="s1">&#39;mean_patient&#39;</span><span class="p">:</span> <span class="n">patients</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="s1">&#39;mean_control&#39;</span><span class="p">:</span> <span class="n">controls</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="s1">&#39;t_stat&#39;</span><span class="p">:</span> <span class="n">t_stat</span><span class="p">,</span>
+        <span class="s1">&#39;p_value&#39;</span><span class="p">:</span> <span class="n">p_val</span>
+    <span class="p">})</span>
+
+<span class="c1"># Convert to DataFrame</span>
+<span class="n">ttest_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ttest_results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  variable  mean_patient  mean_control     t_stat       p_value
+0      BMI     17.304762     23.510526 -10.791807  1.388539e-11
+</pre></div>
+</div>
+</div>
+</div>
+<p>What do these data tell us?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now let&#39;s average across the high and low sugar foods for each person - we need to create a new variable</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now do some plots to show associations between two variables</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">demo_sub</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;BMI&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;average_rating_choice_fathigh_sugarhigh&#39;</span><span class="p">,</span> <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;BMI vs. Average High-Fat Food Rating&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Body Mass Index (BMI)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;High-Fat Food Rating (1–10)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/fc3e7ed37163c83f8d9bb34973a92bb734fa411c78a004e775d449c858da092b.png" src="_images/fc3e7ed37163c83f8d9bb34973a92bb734fa411c78a004e775d449c858da092b.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># color by patient group</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">demo_sub</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;BMI&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;average_rating_choice_fathigh_sugarhigh&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Patient&#39;</span><span class="p">,</span><span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;linewidth&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;BMI vs. Average High-Fat Food Rating&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Body Mass Index (BMI)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;High-Fat Food Rating (1–10)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 800x600 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="_images/b6dcffe0094ed15204dace65dbd9cd5d2f24a162afb7caf9249307951b31a9f5.png" src="_images/b6dcffe0094ed15204dace65dbd9cd5d2f24a162afb7caf9249307951b31a9f5.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#We can change the colors using a custom palette</span>
+
+<span class="n">custom_palette</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Yes&#39;</span><span class="p">:</span> <span class="s1">&#39;#E74C3C&#39;</span><span class="p">,</span>   <span class="c1"># red</span>
+    <span class="s1">&#39;No&#39;</span><span class="p">:</span> <span class="s1">&#39;#3498DB&#39;</span>    <span class="c1"># blue</span>
+<span class="p">}</span>
+
+<span class="c1"># color by patient group</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">demo_sub</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;BMI&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;average_rating_choice_fathigh_sugarhigh&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Patient&#39;</span><span class="p">,</span><span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;linewidth&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span><span class="n">palette</span><span class="o">=</span><span class="n">custom_palette</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;BMI vs. Average High-Fat Food Rating&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Body Mass Index (BMI)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;High-Fat Food Rating (1–10)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 800x600 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="_images/dcfbfbfda72dc6e946e90f2d3bbdd16127eeeb30a578fce2587ff817615d8ad7.png" src="_images/dcfbfbfda72dc6e946e90f2d3bbdd16127eeeb30a578fce2587ff817615d8ad7.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># change the plot labels</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Is the plot different if we look at high-fat and low-sugar foods?</span>
+<span class="c1"># How about if we plot average high-fat (collapse across sugar)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Advanced</span>
+<span class="c1"># Try and plot, in the patient group only BMI against choice preference for high vs low fat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s also look at age</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now, let&#39;s use a regression model to compare patients and HC and adjust for age</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.formula.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">smf</span>
+
+<span class="c1"># Variables to test</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">variables</span><span class="p">:</span>
+    <span class="c1"># Formula: outcome ~ patient_status + age</span>
+    <span class="n">formula</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2"> ~ C(Patient) + Age&quot;</span>
+    
+    <span class="c1"># Fit linear model</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="n">formula</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">demo_sub</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    
+    <span class="c1"># Extract results for patient_status (the group effect)</span>
+    <span class="n">coef</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;C(Patient)[T.Yes]&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">))</span>
+    <span class="n">pval</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">pvalues</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;C(Patient)[T.Yes]&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">))</span>
+    <span class="n">conf_int</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">conf_int</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;C(Patient)[T.Yes]&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    
+    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="n">var</span><span class="p">,</span>
+        <span class="s1">&#39;coef_patient_vs_control&#39;</span><span class="p">:</span> <span class="n">coef</span><span class="p">,</span>
+        <span class="s1">&#39;p_value&#39;</span><span class="p">:</span> <span class="n">pval</span><span class="p">,</span>
+        <span class="s1">&#39;conf_lower&#39;</span><span class="p">:</span> <span class="n">conf_int</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="s1">&#39;conf_upper&#39;</span><span class="p">:</span> <span class="n">conf_int</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="p">})</span>
+
+<span class="c1"># Convert to DataFrame and print</span>
+<span class="n">df_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  variable  coef_patient_vs_control       p_value  conf_lower  conf_upper
+0      BMI                -6.148525  6.697756e-13    -7.31085     -4.9862
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demo_sub</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>Patient</th>
+      <th>BMI</th>
+      <th>EDE Score</th>
+      <th>Age</th>
+      <th>average_rating_choice_fathigh_sugarhigh</th>
+      <th>average_rating_choice_fathigh_sugarlow</th>
+      <th>average_rating_choice_fatlow_sugarhigh</th>
+      <th>average_rating_choice_fatlow_sugarlow</th>
+      <th>average_rating_health_fathigh_sugarhigh</th>
+      <th>...</th>
+      <th>average_reaction_time_choice_fatlow_sugarhigh</th>
+      <th>average_reaction_time_choice_fatlow_sugarlow</th>
+      <th>average_reaction_time_health_fathigh_sugarhigh</th>
+      <th>average_reaction_time_health_fathigh_sugarlow</th>
+      <th>average_reaction_time_health_fatlow_sugarhigh</th>
+      <th>average_reaction_time_health_fatlow_sugarlow</th>
+      <th>average_reaction_time_taste_fathigh_sugarhigh</th>
+      <th>average_reaction_time_taste_fathigh_sugarlow</th>
+      <th>average_reaction_time_taste_fatlow_sugarhigh</th>
+      <th>average_reaction_time_taste_fatlow_sugarlow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Yes</td>
+      <td>17.9</td>
+      <td>4.9</td>
+      <td>56</td>
+      <td>5.333333</td>
+      <td>6.055556</td>
+      <td>5.576923</td>
+      <td>5.312500</td>
+      <td>4.888889</td>
+      <td>...</td>
+      <td>2.175769</td>
+      <td>2.511875</td>
+      <td>1.976667</td>
+      <td>1.978235</td>
+      <td>1.944348</td>
+      <td>2.838667</td>
+      <td>2.131333</td>
+      <td>2.360667</td>
+      <td>2.097000</td>
+      <td>2.208000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Yes</td>
+      <td>18.6</td>
+      <td>5.3</td>
+      <td>46</td>
+      <td>4.714286</td>
+      <td>6.352941</td>
+      <td>4.800000</td>
+      <td>5.050000</td>
+      <td>5.315789</td>
+      <td>...</td>
+      <td>2.439000</td>
+      <td>2.123000</td>
+      <td>2.256316</td>
+      <td>2.758750</td>
+      <td>2.086522</td>
+      <td>2.295833</td>
+      <td>2.171111</td>
+      <td>2.287143</td>
+      <td>2.273500</td>
+      <td>2.128182</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>No</td>
+      <td>22.3</td>
+      <td>0.6</td>
+      <td>32</td>
+      <td>5.421053</td>
+      <td>5.000000</td>
+      <td>6.050000</td>
+      <td>5.916667</td>
+      <td>4.222222</td>
+      <td>...</td>
+      <td>2.476500</td>
+      <td>2.435417</td>
+      <td>1.810000</td>
+      <td>2.247368</td>
+      <td>2.176000</td>
+      <td>2.136400</td>
+      <td>2.181875</td>
+      <td>2.464545</td>
+      <td>2.211579</td>
+      <td>2.096667</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>No</td>
+      <td>22.9</td>
+      <td>0.5</td>
+      <td>60</td>
+      <td>4.882353</td>
+      <td>4.461538</td>
+      <td>5.259259</td>
+      <td>6.312500</td>
+      <td>5.833333</td>
+      <td>...</td>
+      <td>2.267037</td>
+      <td>2.182500</td>
+      <td>2.307778</td>
+      <td>2.170588</td>
+      <td>2.108500</td>
+      <td>2.018333</td>
+      <td>2.093043</td>
+      <td>2.081000</td>
+      <td>1.867000</td>
+      <td>2.108500</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Yes</td>
+      <td>15.7</td>
+      <td>4.1</td>
+      <td>25</td>
+      <td>5.444444</td>
+      <td>5.357143</td>
+      <td>5.421053</td>
+      <td>5.217391</td>
+      <td>6.142857</td>
+      <td>...</td>
+      <td>2.062632</td>
+      <td>2.337826</td>
+      <td>2.427857</td>
+      <td>2.234286</td>
+      <td>2.555833</td>
+      <td>2.189130</td>
+      <td>2.252667</td>
+      <td>1.963636</td>
+      <td>2.265455</td>
+      <td>2.099630</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>Yes</td>
+      <td>17.2</td>
+      <td>3.5</td>
+      <td>38</td>
+      <td>6.647059</td>
+      <td>6.400000</td>
+      <td>5.666667</td>
+      <td>4.750000</td>
+      <td>5.928571</td>
+      <td>...</td>
+      <td>2.444444</td>
+      <td>2.656250</td>
+      <td>2.175000</td>
+      <td>2.060000</td>
+      <td>2.025000</td>
+      <td>2.566500</td>
+      <td>2.400952</td>
+      <td>2.225000</td>
+      <td>2.108000</td>
+      <td>2.526316</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>Yes</td>
+      <td>18.7</td>
+      <td>4.6</td>
+      <td>56</td>
+      <td>6.647059</td>
+      <td>5.214286</td>
+      <td>6.285714</td>
+      <td>5.318182</td>
+      <td>5.000000</td>
+      <td>...</td>
+      <td>1.920952</td>
+      <td>2.303636</td>
+      <td>2.341000</td>
+      <td>2.266923</td>
+      <td>2.211304</td>
+      <td>2.291053</td>
+      <td>2.748889</td>
+      <td>2.758667</td>
+      <td>2.316522</td>
+      <td>1.485882</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>Yes</td>
+      <td>17.2</td>
+      <td>4.2</td>
+      <td>36</td>
+      <td>6.076923</td>
+      <td>6.294118</td>
+      <td>5.375000</td>
+      <td>5.684211</td>
+      <td>5.076923</td>
+      <td>...</td>
+      <td>2.215833</td>
+      <td>2.490526</td>
+      <td>2.083846</td>
+      <td>2.222500</td>
+      <td>1.908333</td>
+      <td>2.111429</td>
+      <td>2.855625</td>
+      <td>2.147500</td>
+      <td>2.400000</td>
+      <td>1.908421</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>No</td>
+      <td>22.0</td>
+      <td>1.7</td>
+      <td>40</td>
+      <td>6.444444</td>
+      <td>7.000000</td>
+      <td>4.333333</td>
+      <td>5.958333</td>
+      <td>5.409091</td>
+      <td>...</td>
+      <td>1.991250</td>
+      <td>2.411667</td>
+      <td>2.359091</td>
+      <td>2.022857</td>
+      <td>1.825652</td>
+      <td>2.031333</td>
+      <td>2.254286</td>
+      <td>2.166154</td>
+      <td>2.113333</td>
+      <td>2.449565</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>No</td>
+      <td>22.8</td>
+      <td>0.2</td>
+      <td>28</td>
+      <td>5.000000</td>
+      <td>4.473684</td>
+      <td>7.000000</td>
+      <td>6.357143</td>
+      <td>5.500000</td>
+      <td>...</td>
+      <td>2.410588</td>
+      <td>2.347143</td>
+      <td>2.125000</td>
+      <td>2.693158</td>
+      <td>2.651176</td>
+      <td>2.317692</td>
+      <td>2.486842</td>
+      <td>2.321739</td>
+      <td>2.087917</td>
+      <td>2.232222</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11</td>
+      <td>No</td>
+      <td>24.9</td>
+      <td>1.9</td>
+      <td>28</td>
+      <td>4.800000</td>
+      <td>6.857143</td>
+      <td>5.062500</td>
+      <td>5.400000</td>
+      <td>5.444444</td>
+      <td>...</td>
+      <td>2.731250</td>
+      <td>2.392000</td>
+      <td>2.456667</td>
+      <td>2.809412</td>
+      <td>2.409048</td>
+      <td>1.990833</td>
+      <td>2.138235</td>
+      <td>2.233846</td>
+      <td>2.383500</td>
+      <td>2.199200</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>Yes</td>
+      <td>17.2</td>
+      <td>3.7</td>
+      <td>41</td>
+      <td>6.117647</td>
+      <td>5.611111</td>
+      <td>5.937500</td>
+      <td>6.863636</td>
+      <td>6.000000</td>
+      <td>...</td>
+      <td>2.353750</td>
+      <td>2.533636</td>
+      <td>2.211667</td>
+      <td>1.966667</td>
+      <td>2.378750</td>
+      <td>2.270000</td>
+      <td>2.383333</td>
+      <td>2.443462</td>
+      <td>1.912778</td>
+      <td>2.181667</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13</td>
+      <td>Yes</td>
+      <td>18.5</td>
+      <td>3.5</td>
+      <td>53</td>
+      <td>5.937500</td>
+      <td>4.692308</td>
+      <td>6.105263</td>
+      <td>5.772727</td>
+      <td>5.846154</td>
+      <td>...</td>
+      <td>2.336316</td>
+      <td>1.979545</td>
+      <td>2.470000</td>
+      <td>2.340000</td>
+      <td>2.436000</td>
+      <td>2.357368</td>
+      <td>2.412857</td>
+      <td>2.666250</td>
+      <td>1.945714</td>
+      <td>2.487727</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>14</td>
+      <td>Yes</td>
+      <td>15.9</td>
+      <td>3.8</td>
+      <td>57</td>
+      <td>6.000000</td>
+      <td>5.434783</td>
+      <td>5.722222</td>
+      <td>5.666667</td>
+      <td>4.736842</td>
+      <td>...</td>
+      <td>2.036111</td>
+      <td>2.494286</td>
+      <td>2.596316</td>
+      <td>2.059444</td>
+      <td>2.185263</td>
+      <td>2.383333</td>
+      <td>2.443846</td>
+      <td>1.822000</td>
+      <td>2.088636</td>
+      <td>1.975789</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>15</td>
+      <td>No</td>
+      <td>21.8</td>
+      <td>2.2</td>
+      <td>41</td>
+      <td>5.875000</td>
+      <td>6.312500</td>
+      <td>5.650000</td>
+      <td>4.666667</td>
+      <td>6.529412</td>
+      <td>...</td>
+      <td>2.168000</td>
+      <td>2.502381</td>
+      <td>2.664706</td>
+      <td>2.417143</td>
+      <td>2.229474</td>
+      <td>2.131200</td>
+      <td>2.136957</td>
+      <td>2.173333</td>
+      <td>2.323889</td>
+      <td>2.484286</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>16</td>
+      <td>Yes</td>
+      <td>16.9</td>
+      <td>4.5</td>
+      <td>20</td>
+      <td>5.095238</td>
+      <td>6.071429</td>
+      <td>4.909091</td>
+      <td>4.941176</td>
+      <td>5.863636</td>
+      <td>...</td>
+      <td>2.108182</td>
+      <td>2.170000</td>
+      <td>2.050455</td>
+      <td>2.428333</td>
+      <td>2.462857</td>
+      <td>2.211500</td>
+      <td>2.550000</td>
+      <td>2.628000</td>
+      <td>1.892105</td>
+      <td>2.623684</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>17</td>
+      <td>Yes</td>
+      <td>15.9</td>
+      <td>4.9</td>
+      <td>39</td>
+      <td>4.666667</td>
+      <td>5.833333</td>
+      <td>5.235294</td>
+      <td>4.772727</td>
+      <td>5.826087</td>
+      <td>...</td>
+      <td>1.972353</td>
+      <td>2.211364</td>
+      <td>2.511739</td>
+      <td>2.242941</td>
+      <td>2.388000</td>
+      <td>2.170526</td>
+      <td>2.161500</td>
+      <td>2.334737</td>
+      <td>2.375625</td>
+      <td>2.125556</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18</td>
+      <td>No</td>
+      <td>29.4</td>
+      <td>0.9</td>
+      <td>19</td>
+      <td>6.133333</td>
+      <td>5.611111</td>
+      <td>6.684211</td>
+      <td>5.590909</td>
+      <td>4.818182</td>
+      <td>...</td>
+      <td>1.860000</td>
+      <td>2.137727</td>
+      <td>1.983636</td>
+      <td>2.122609</td>
+      <td>2.217000</td>
+      <td>1.963000</td>
+      <td>2.120000</td>
+      <td>1.986842</td>
+      <td>1.780000</td>
+      <td>2.516957</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>19</td>
+      <td>Yes</td>
+      <td>16.2</td>
+      <td>4.4</td>
+      <td>41</td>
+      <td>5.461538</td>
+      <td>6.095238</td>
+      <td>4.761905</td>
+      <td>6.789474</td>
+      <td>6.444444</td>
+      <td>...</td>
+      <td>2.258095</td>
+      <td>2.746316</td>
+      <td>2.626667</td>
+      <td>2.073529</td>
+      <td>2.129600</td>
+      <td>1.956250</td>
+      <td>1.950500</td>
+      <td>1.751875</td>
+      <td>2.004000</td>
+      <td>2.468125</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20</td>
+      <td>No</td>
+      <td>25.3</td>
+      <td>0.7</td>
+      <td>61</td>
+      <td>4.941176</td>
+      <td>5.166667</td>
+      <td>5.681818</td>
+      <td>5.478261</td>
+      <td>5.470588</td>
+      <td>...</td>
+      <td>2.342273</td>
+      <td>2.385652</td>
+      <td>2.473529</td>
+      <td>2.084167</td>
+      <td>1.907500</td>
+      <td>2.259545</td>
+      <td>2.172857</td>
+      <td>2.260714</td>
+      <td>2.557500</td>
+      <td>2.074783</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>21</td>
+      <td>Yes</td>
+      <td>16.7</td>
+      <td>4.5</td>
+      <td>47</td>
+      <td>5.444444</td>
+      <td>4.928571</td>
+      <td>4.700000</td>
+      <td>4.545455</td>
+      <td>5.615385</td>
+      <td>...</td>
+      <td>2.636500</td>
+      <td>2.121364</td>
+      <td>2.278462</td>
+      <td>2.453077</td>
+      <td>2.665455</td>
+      <td>2.458077</td>
+      <td>2.292778</td>
+      <td>2.973077</td>
+      <td>2.365652</td>
+      <td>2.295263</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>22</td>
+      <td>Yes</td>
+      <td>16.9</td>
+      <td>4.9</td>
+      <td>55</td>
+      <td>4.466667</td>
+      <td>6.000000</td>
+      <td>6.000000</td>
+      <td>5.833333</td>
+      <td>5.200000</td>
+      <td>...</td>
+      <td>2.232333</td>
+      <td>2.763889</td>
+      <td>2.500000</td>
+      <td>1.596667</td>
+      <td>2.502000</td>
+      <td>2.231667</td>
+      <td>2.675500</td>
+      <td>1.999231</td>
+      <td>1.959000</td>
+      <td>2.028421</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>23</td>
+      <td>No</td>
+      <td>24.1</td>
+      <td>2.0</td>
+      <td>19</td>
+      <td>5.333333</td>
+      <td>6.357143</td>
+      <td>6.285714</td>
+      <td>5.400000</td>
+      <td>5.650000</td>
+      <td>...</td>
+      <td>2.455238</td>
+      <td>2.280800</td>
+      <td>2.082000</td>
+      <td>2.391875</td>
+      <td>2.440500</td>
+      <td>2.344737</td>
+      <td>2.001579</td>
+      <td>2.370714</td>
+      <td>2.287500</td>
+      <td>2.142273</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>24</td>
+      <td>No</td>
+      <td>20.6</td>
+      <td>-0.1</td>
+      <td>38</td>
+      <td>5.529412</td>
+      <td>7.200000</td>
+      <td>5.428571</td>
+      <td>5.050000</td>
+      <td>6.333333</td>
+      <td>...</td>
+      <td>2.207619</td>
+      <td>2.155000</td>
+      <td>2.448333</td>
+      <td>2.278000</td>
+      <td>2.185556</td>
+      <td>2.048696</td>
+      <td>2.264500</td>
+      <td>2.389000</td>
+      <td>2.231500</td>
+      <td>1.970000</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>25</td>
+      <td>Yes</td>
+      <td>16.7</td>
+      <td>5.8</td>
+      <td>50</td>
+      <td>5.611111</td>
+      <td>5.083333</td>
+      <td>5.461538</td>
+      <td>5.900000</td>
+      <td>4.600000</td>
+      <td>...</td>
+      <td>1.874615</td>
+      <td>2.424333</td>
+      <td>2.447000</td>
+      <td>1.802500</td>
+      <td>1.712500</td>
+      <td>2.488889</td>
+      <td>2.075909</td>
+      <td>2.050000</td>
+      <td>2.146667</td>
+      <td>2.309444</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>26</td>
+      <td>No</td>
+      <td>23.2</td>
+      <td>1.3</td>
+      <td>29</td>
+      <td>4.750000</td>
+      <td>4.714286</td>
+      <td>5.363636</td>
+      <td>6.833333</td>
+      <td>4.937500</td>
+      <td>...</td>
+      <td>2.077273</td>
+      <td>2.408333</td>
+      <td>2.372500</td>
+      <td>1.832667</td>
+      <td>2.173704</td>
+      <td>2.381875</td>
+      <td>2.101538</td>
+      <td>2.420500</td>
+      <td>2.064000</td>
+      <td>2.221429</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>27</td>
+      <td>No</td>
+      <td>21.8</td>
+      <td>0.8</td>
+      <td>39</td>
+      <td>5.454545</td>
+      <td>4.882353</td>
+      <td>6.000000</td>
+      <td>4.882353</td>
+      <td>6.529412</td>
+      <td>...</td>
+      <td>2.403333</td>
+      <td>2.387059</td>
+      <td>1.591765</td>
+      <td>2.618125</td>
+      <td>2.134783</td>
+      <td>2.277368</td>
+      <td>2.154444</td>
+      <td>2.205000</td>
+      <td>2.056667</td>
+      <td>1.870500</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>28</td>
+      <td>No</td>
+      <td>21.9</td>
+      <td>0.7</td>
+      <td>61</td>
+      <td>4.812500</td>
+      <td>4.909091</td>
+      <td>5.952381</td>
+      <td>5.923077</td>
+      <td>5.363636</td>
+      <td>...</td>
+      <td>2.170952</td>
+      <td>2.043077</td>
+      <td>2.500909</td>
+      <td>1.741000</td>
+      <td>2.215238</td>
+      <td>2.347273</td>
+      <td>2.224500</td>
+      <td>2.327647</td>
+      <td>2.262105</td>
+      <td>2.439474</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>29</td>
+      <td>No</td>
+      <td>25.7</td>
+      <td>1.6</td>
+      <td>42</td>
+      <td>5.733333</td>
+      <td>5.823529</td>
+      <td>5.944444</td>
+      <td>4.500000</td>
+      <td>4.631579</td>
+      <td>...</td>
+      <td>2.193333</td>
+      <td>2.176818</td>
+      <td>2.312632</td>
+      <td>2.549130</td>
+      <td>2.908462</td>
+      <td>2.279000</td>
+      <td>2.279286</td>
+      <td>2.147222</td>
+      <td>1.950455</td>
+      <td>2.184444</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>30</td>
+      <td>No</td>
+      <td>25.5</td>
+      <td>1.1</td>
+      <td>44</td>
+      <td>7.083333</td>
+      <td>5.850000</td>
+      <td>5.692308</td>
+      <td>5.466667</td>
+      <td>4.200000</td>
+      <td>...</td>
+      <td>2.348462</td>
+      <td>1.655333</td>
+      <td>2.036000</td>
+      <td>2.093333</td>
+      <td>2.337143</td>
+      <td>1.794348</td>
+      <td>2.187368</td>
+      <td>2.377059</td>
+      <td>2.741765</td>
+      <td>2.190476</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>31</td>
+      <td>No</td>
+      <td>22.6</td>
+      <td>0.1</td>
+      <td>59</td>
+      <td>5.470588</td>
+      <td>5.733333</td>
+      <td>6.173913</td>
+      <td>5.550000</td>
+      <td>5.375000</td>
+      <td>...</td>
+      <td>2.548696</td>
+      <td>2.249000</td>
+      <td>2.400000</td>
+      <td>2.269231</td>
+      <td>2.738500</td>
+      <td>2.440000</td>
+      <td>2.344375</td>
+      <td>2.358667</td>
+      <td>2.327692</td>
+      <td>2.455625</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>32</td>
+      <td>No</td>
+      <td>23.3</td>
+      <td>1.2</td>
+      <td>45</td>
+      <td>5.916667</td>
+      <td>4.764706</td>
+      <td>5.038462</td>
+      <td>5.000000</td>
+      <td>5.952381</td>
+      <td>...</td>
+      <td>2.375000</td>
+      <td>2.354211</td>
+      <td>2.431429</td>
+      <td>2.039375</td>
+      <td>2.510625</td>
+      <td>2.711000</td>
+      <td>2.340556</td>
+      <td>2.392778</td>
+      <td>2.248571</td>
+      <td>2.654118</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>33</td>
+      <td>No</td>
+      <td>26.0</td>
+      <td>1.7</td>
+      <td>33</td>
+      <td>5.727273</td>
+      <td>5.904762</td>
+      <td>5.560000</td>
+      <td>4.941176</td>
+      <td>5.615385</td>
+      <td>...</td>
+      <td>2.328800</td>
+      <td>1.930000</td>
+      <td>2.143077</td>
+      <td>1.866000</td>
+      <td>2.345455</td>
+      <td>2.243750</td>
+      <td>2.401176</td>
+      <td>2.294500</td>
+      <td>2.454762</td>
+      <td>2.494667</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>34</td>
+      <td>No</td>
+      <td>20.6</td>
+      <td>1.5</td>
+      <td>32</td>
+      <td>4.157895</td>
+      <td>5.809524</td>
+      <td>5.500000</td>
+      <td>5.571429</td>
+      <td>4.800000</td>
+      <td>...</td>
+      <td>2.374167</td>
+      <td>2.127619</td>
+      <td>2.338000</td>
+      <td>2.798636</td>
+      <td>2.463333</td>
+      <td>2.274000</td>
+      <td>2.460625</td>
+      <td>2.212632</td>
+      <td>2.345000</td>
+      <td>2.138571</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>35</td>
+      <td>Yes</td>
+      <td>17.9</td>
+      <td>4.0</td>
+      <td>64</td>
+      <td>6.444444</td>
+      <td>5.684211</td>
+      <td>4.857143</td>
+      <td>7.176471</td>
+      <td>5.294118</td>
+      <td>...</td>
+      <td>1.917619</td>
+      <td>2.363529</td>
+      <td>2.230000</td>
+      <td>2.187778</td>
+      <td>2.378571</td>
+      <td>2.635882</td>
+      <td>2.199000</td>
+      <td>2.127143</td>
+      <td>2.534348</td>
+      <td>2.312963</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>36</td>
+      <td>Yes</td>
+      <td>19.9</td>
+      <td>3.4</td>
+      <td>61</td>
+      <td>5.000000</td>
+      <td>5.866667</td>
+      <td>5.263158</td>
+      <td>5.695652</td>
+      <td>5.333333</td>
+      <td>...</td>
+      <td>2.541579</td>
+      <td>2.403913</td>
+      <td>2.121111</td>
+      <td>2.215714</td>
+      <td>2.169474</td>
+      <td>2.520000</td>
+      <td>2.332727</td>
+      <td>1.888750</td>
+      <td>2.128571</td>
+      <td>2.361000</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>37</td>
+      <td>Yes</td>
+      <td>19.9</td>
+      <td>4.2</td>
+      <td>20</td>
+      <td>5.000000</td>
+      <td>4.187500</td>
+      <td>6.333333</td>
+      <td>4.850000</td>
+      <td>5.214286</td>
+      <td>...</td>
+      <td>2.255000</td>
+      <td>2.521500</td>
+      <td>2.154286</td>
+      <td>2.004000</td>
+      <td>2.270435</td>
+      <td>2.299565</td>
+      <td>2.084615</td>
+      <td>2.249444</td>
+      <td>2.334091</td>
+      <td>2.500952</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>38</td>
+      <td>Yes</td>
+      <td>15.2</td>
+      <td>7.1</td>
+      <td>54</td>
+      <td>6.307692</td>
+      <td>4.437500</td>
+      <td>5.217391</td>
+      <td>5.772727</td>
+      <td>4.538462</td>
+      <td>...</td>
+      <td>2.309130</td>
+      <td>2.447727</td>
+      <td>2.653846</td>
+      <td>2.342727</td>
+      <td>2.354828</td>
+      <td>2.478000</td>
+      <td>2.437826</td>
+      <td>1.769286</td>
+      <td>2.204444</td>
+      <td>2.081053</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>39</td>
+      <td>Yes</td>
+      <td>16.6</td>
+      <td>3.3</td>
+      <td>24</td>
+      <td>4.857143</td>
+      <td>4.833333</td>
+      <td>6.083333</td>
+      <td>5.416667</td>
+      <td>4.714286</td>
+      <td>...</td>
+      <td>1.645000</td>
+      <td>2.013750</td>
+      <td>2.615000</td>
+      <td>2.293333</td>
+      <td>2.116071</td>
+      <td>2.502632</td>
+      <td>1.780833</td>
+      <td>2.144545</td>
+      <td>2.045909</td>
+      <td>2.081176</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>40</td>
+      <td>Yes</td>
+      <td>17.7</td>
+      <td>3.8</td>
+      <td>38</td>
+      <td>5.583333</td>
+      <td>5.631579</td>
+      <td>4.375000</td>
+      <td>5.576923</td>
+      <td>5.923077</td>
+      <td>...</td>
+      <td>2.480000</td>
+      <td>1.867692</td>
+      <td>2.250000</td>
+      <td>2.448571</td>
+      <td>2.117778</td>
+      <td>2.473333</td>
+      <td>2.323333</td>
+      <td>2.063125</td>
+      <td>2.396000</td>
+      <td>2.034800</td>
+    </tr>
+  </tbody>
+</table>
+<p>40 rows × 29 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We can create interaction terms by using * (e.g., Patient * fat would be an interaction between Patient and fat content)</span>
+<span class="c1"># Try now to examine whether patients and HC differ in choice ratings for high and low fat foods</span>
+
+<span class="n">demo_sub</span><span class="p">[</span><span class="s1">&#39;high_fat_choice&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">demo_sub</span><span class="o">.</span><span class="n">average_rating_choice_fathigh_sugarhigh</span> <span class="o">+</span> <span class="n">demo_sub</span><span class="o">.</span><span class="n">average_rating_choice_fathigh_sugarlow</span>
+<span class="n">demo_sub</span><span class="p">[</span><span class="s1">&#39;low_fat_choice&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">demo_sub</span><span class="o">.</span><span class="n">average_rating_choice_fathigh_sugarhigh</span> <span class="o">+</span> <span class="n">demo_sub</span><span class="o">.</span><span class="n">average_rating_choice_fathigh_sugarlow</span>
+
+<span class="n">long_vars</span><span class="o">=</span><span class="n">demo_sub</span><span class="p">[[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span><span class="s1">&#39;high_fat_choice&#39;</span><span class="p">,</span><span class="s1">&#39;low_fat_choice&#39;</span><span class="p">,</span><span class="s1">&#39;Patient&#39;</span><span class="p">,</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span><span class="s1">&#39;BMI&#39;</span><span class="p">]]</span>
+
+
+<span class="n">long</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">long_vars</span><span class="p">,</span> 
+                  <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">],</span>
+                  <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;high_fat_choice&#39;</span><span class="p">,</span><span class="s1">&#39;low_fat_choice&#39;</span><span class="p">],</span>
+                  <span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Fat&#39;</span><span class="p">,</span> 
+                  <span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;Choice&#39;</span><span class="p">)</span>
+
+<span class="n">long</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">long</span><span class="p">,</span><span class="n">long_vars</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">formula</span> <span class="o">=</span> <span class="s2">&quot;Choice ~ C(Patient)*Fat + Age&quot;</span>
+    
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">mixedlm</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="n">formula</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">long</span><span class="p">,</span><span class="n">groups</span><span class="o">=</span><span class="s2">&quot;ID&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    
+<span class="c1"># Extract results for patient_status (the group effect)</span>
+<span class="n">coef</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;C(Patient)[T.Yes]&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">))</span>
+<span class="n">pval</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">pvalues</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;C(Patient)[T.Yes]&#39;</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">))</span>
+<span class="n">conf_int</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">conf_int</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;C(Patient)[T.Yes]&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Is this significant?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now try to group the demo df by patient status and correlate fat intake at meal and age</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>ID</th>
+      <th>Age</th>
+      <th>Patient</th>
+      <th>Medication</th>
+      <th>BMI</th>
+      <th>Fat (g)</th>
+      <th>Calories</th>
+      <th>Protein (g)</th>
+      <th>Sugar (g)</th>
+      <th>EDE Score</th>
+      <th>Duration of Illness</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1</td>
+      <td>56</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>17.9</td>
+      <td>6</td>
+      <td>365</td>
+      <td>4</td>
+      <td>25</td>
+      <td>4.9</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>46</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>18.6</td>
+      <td>9</td>
+      <td>306</td>
+      <td>12</td>
+      <td>15</td>
+      <td>5.3</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>3</td>
+      <td>32</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>22.3</td>
+      <td>24</td>
+      <td>635</td>
+      <td>36</td>
+      <td>20</td>
+      <td>0.6</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>4</td>
+      <td>60</td>
+      <td>No</td>
+      <td>No</td>
+      <td>22.9</td>
+      <td>32</td>
+      <td>456</td>
+      <td>27</td>
+      <td>21</td>
+      <td>0.5</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>5</td>
+      <td>25</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>15.7</td>
+      <td>11</td>
+      <td>332</td>
+      <td>16</td>
+      <td>17</td>
+      <td>4.1</td>
+      <td>9.6</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>6</td>
+      <td>38</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>17.2</td>
+      <td>12</td>
+      <td>318</td>
+      <td>9</td>
+      <td>14</td>
+      <td>3.5</td>
+      <td>8.6</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>6</td>
+      <td>7</td>
+      <td>56</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>18.7</td>
+      <td>14</td>
+      <td>213</td>
+      <td>8</td>
+      <td>16</td>
+      <td>4.6</td>
+      <td>4.2</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>7</td>
+      <td>8</td>
+      <td>36</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>17.2</td>
+      <td>14</td>
+      <td>317</td>
+      <td>10</td>
+      <td>18</td>
+      <td>4.2</td>
+      <td>9.6</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>8</td>
+      <td>9</td>
+      <td>40</td>
+      <td>No</td>
+      <td>No</td>
+      <td>22.0</td>
+      <td>25</td>
+      <td>784</td>
+      <td>23</td>
+      <td>24</td>
+      <td>1.7</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>9</td>
+      <td>10</td>
+      <td>28</td>
+      <td>No</td>
+      <td>No</td>
+      <td>22.8</td>
+      <td>19</td>
+      <td>576</td>
+      <td>22</td>
+      <td>29</td>
+      <td>0.2</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>10</td>
+      <td>11</td>
+      <td>28</td>
+      <td>No</td>
+      <td>No</td>
+      <td>24.9</td>
+      <td>28</td>
+      <td>554</td>
+      <td>32</td>
+      <td>23</td>
+      <td>1.9</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>11</td>
+      <td>12</td>
+      <td>41</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>17.2</td>
+      <td>13</td>
+      <td>408</td>
+      <td>21</td>
+      <td>16</td>
+      <td>3.7</td>
+      <td>7.1</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>12</td>
+      <td>13</td>
+      <td>53</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>18.5</td>
+      <td>7</td>
+      <td>370</td>
+      <td>11</td>
+      <td>19</td>
+      <td>3.5</td>
+      <td>5.3</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>13</td>
+      <td>14</td>
+      <td>57</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>15.9</td>
+      <td>9</td>
+      <td>564</td>
+      <td>7</td>
+      <td>29</td>
+      <td>3.8</td>
+      <td>5.4</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>14</td>
+      <td>15</td>
+      <td>41</td>
+      <td>No</td>
+      <td>No</td>
+      <td>21.8</td>
+      <td>29</td>
+      <td>518</td>
+      <td>33</td>
+      <td>20</td>
+      <td>2.2</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>15</td>
+      <td>16</td>
+      <td>20</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>16.9</td>
+      <td>14</td>
+      <td>377</td>
+      <td>8</td>
+      <td>27</td>
+      <td>4.5</td>
+      <td>1.7</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>16</td>
+      <td>17</td>
+      <td>39</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>15.9</td>
+      <td>9</td>
+      <td>345</td>
+      <td>9</td>
+      <td>12</td>
+      <td>4.9</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td>No</td>
+      <td>No</td>
+      <td>29.4</td>
+      <td>23</td>
+      <td>655</td>
+      <td>32</td>
+      <td>26</td>
+      <td>0.9</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>18</td>
+      <td>19</td>
+      <td>41</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>16.2</td>
+      <td>11</td>
+      <td>392</td>
+      <td>13</td>
+      <td>16</td>
+      <td>4.4</td>
+      <td>6.4</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>19</td>
+      <td>20</td>
+      <td>61</td>
+      <td>No</td>
+      <td>No</td>
+      <td>25.3</td>
+      <td>28</td>
+      <td>647</td>
+      <td>25</td>
+      <td>20</td>
+      <td>0.7</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>20</td>
+      <td>21</td>
+      <td>47</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>16.7</td>
+      <td>16</td>
+      <td>165</td>
+      <td>14</td>
+      <td>21</td>
+      <td>4.5</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>21</td>
+      <td>22</td>
+      <td>55</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>16.9</td>
+      <td>12</td>
+      <td>252</td>
+      <td>12</td>
+      <td>20</td>
+      <td>4.9</td>
+      <td>2.9</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>22</td>
+      <td>23</td>
+      <td>19</td>
+      <td>No</td>
+      <td>No</td>
+      <td>24.1</td>
+      <td>30</td>
+      <td>786</td>
+      <td>41</td>
+      <td>22</td>
+      <td>2.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>23</td>
+      <td>24</td>
+      <td>38</td>
+      <td>No</td>
+      <td>No</td>
+      <td>20.6</td>
+      <td>29</td>
+      <td>767</td>
+      <td>25</td>
+      <td>12</td>
+      <td>-0.1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>24</td>
+      <td>25</td>
+      <td>50</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>16.7</td>
+      <td>12</td>
+      <td>290</td>
+      <td>10</td>
+      <td>15</td>
+      <td>5.8</td>
+      <td>9.5</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>25</td>
+      <td>26</td>
+      <td>29</td>
+      <td>No</td>
+      <td>No</td>
+      <td>23.2</td>
+      <td>17</td>
+      <td>700</td>
+      <td>27</td>
+      <td>25</td>
+      <td>1.3</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>26</td>
+      <td>27</td>
+      <td>39</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>21.8</td>
+      <td>19</td>
+      <td>928</td>
+      <td>27</td>
+      <td>25</td>
+      <td>0.8</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>27</td>
+      <td>28</td>
+      <td>61</td>
+      <td>No</td>
+      <td>No</td>
+      <td>21.9</td>
+      <td>28</td>
+      <td>646</td>
+      <td>33</td>
+      <td>29</td>
+      <td>0.7</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>28</td>
+      <td>29</td>
+      <td>42</td>
+      <td>No</td>
+      <td>No</td>
+      <td>25.7</td>
+      <td>16</td>
+      <td>648</td>
+      <td>18</td>
+      <td>36</td>
+      <td>1.6</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>29</td>
+      <td>30</td>
+      <td>44</td>
+      <td>No</td>
+      <td>No</td>
+      <td>25.5</td>
+      <td>25</td>
+      <td>669</td>
+      <td>32</td>
+      <td>27</td>
+      <td>1.1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>30</td>
+      <td>31</td>
+      <td>59</td>
+      <td>No</td>
+      <td>No</td>
+      <td>22.6</td>
+      <td>30</td>
+      <td>710</td>
+      <td>26</td>
+      <td>28</td>
+      <td>0.1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>31</td>
+      <td>32</td>
+      <td>45</td>
+      <td>No</td>
+      <td>No</td>
+      <td>23.3</td>
+      <td>25</td>
+      <td>615</td>
+      <td>34</td>
+      <td>25</td>
+      <td>1.2</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>32</td>
+      <td>33</td>
+      <td>33</td>
+      <td>No</td>
+      <td>No</td>
+      <td>26.0</td>
+      <td>21</td>
+      <td>710</td>
+      <td>29</td>
+      <td>32</td>
+      <td>1.7</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>33</td>
+      <td>34</td>
+      <td>32</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>20.6</td>
+      <td>20</td>
+      <td>455</td>
+      <td>33</td>
+      <td>28</td>
+      <td>1.5</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>34</td>
+      <td>35</td>
+      <td>64</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>17.9</td>
+      <td>15</td>
+      <td>346</td>
+      <td>12</td>
+      <td>21</td>
+      <td>4.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>35</td>
+      <td>36</td>
+      <td>61</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>19.9</td>
+      <td>13</td>
+      <td>324</td>
+      <td>15</td>
+      <td>27</td>
+      <td>3.4</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>36</td>
+      <td>37</td>
+      <td>20</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>19.9</td>
+      <td>10</td>
+      <td>302</td>
+      <td>20</td>
+      <td>19</td>
+      <td>4.2</td>
+      <td>9.4</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>37</td>
+      <td>38</td>
+      <td>54</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>15.2</td>
+      <td>16</td>
+      <td>281</td>
+      <td>11</td>
+      <td>16</td>
+      <td>7.1</td>
+      <td>9.8</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>38</td>
+      <td>39</td>
+      <td>24</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>16.6</td>
+      <td>15</td>
+      <td>271</td>
+      <td>13</td>
+      <td>20</td>
+      <td>3.3</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>39</td>
+      <td>40</td>
+      <td>38</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>17.7</td>
+      <td>19</td>
+      <td>254</td>
+      <td>12</td>
+      <td>23</td>
+      <td>3.8</td>
+      <td>1.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vars_of_interest</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">,</span><span class="s1">&#39;Calories&#39;</span><span class="p">]</span>
+
+<span class="n">grouped_corrs</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Patient&#39;</span><span class="p">)[</span><span class="n">vars_of_interest</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+
+
+<span class="c1"># To access individual group&#39;s correlation matrix:</span>
+<span class="n">corr_patient</span> <span class="o">=</span> <span class="n">grouped_corrs</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Yes&#39;</span><span class="p">]</span>
+<span class="n">corr_control</span> <span class="o">=</span> <span class="n">grouped_corrs</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;No&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Next, load in the delay discounting data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="homework">
+<h1>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h1>
+<section id="complete-tasks-below-and-paste-upload-solution-to-github">
+<h2>Complete tasks below and paste upload solution to Github<a class="headerlink" href="#complete-tasks-below-and-paste-upload-solution-to-github" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Calculate the average number of delayed choices in patient and HC groups</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Correlation between age, delayed choices and impulsivity scale per group</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Plot delayed choices and impulsivity by patient group</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="python_week1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Session 1</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Session 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-tasks-below-and-paste-upload-solution-to-github">Complete tasks below and paste upload solution to Github</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. L
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

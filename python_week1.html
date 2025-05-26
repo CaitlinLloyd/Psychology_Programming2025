@@ -1,0 +1,1152 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Python Session 1 &#8212; Jupyter Book for Psychology Programming Course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'python_week1';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python Session 2" href="python_week2.html" />
+    <link rel="prev" title="Welcome!" href="introduction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Jupyter Book for Psychology Programming Course - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Jupyter Book for Psychology Programming Course - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Welcome!</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Python Session 1</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="python_week2.html">Python Session 2</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/CaitlinLloyd/Programming_for_Psychology/blob/master/python_week1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/CaitlinLloyd/Programming_for_Psychology" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/CaitlinLloyd/Programming_for_Psychology/issues/new?title=Issue%20on%20page%20%2Fpython_week1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/python_week1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python Session 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Session 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-will-practice-cleaning-some-food-choice-task-data">We will practice cleaning some Food choice task data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-data-are-stored-in-a-dataframe-object-which-we-have-called-df">The data are stored in a dataframe object, which we have called df</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-the-homework-exercise">This is the homework exercise</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extra">Extra</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#these-are-hard-exercises-not-homework-for-extra-practice">These are hard exercises - not homework, for extra practice</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-session-1">
+<h1>Python Session 1<a class="headerlink" href="#python-session-1" title="Link to this heading">#</a></h1>
+<section id="we-will-practice-cleaning-some-food-choice-task-data">
+<h2>We will practice cleaning some Food choice task data<a class="headerlink" href="#we-will-practice-cleaning-some-food-choice-task-data" title="Link to this heading">#</a></h2>
+<p>We are going to generate data from 20 individuals to practice our skills. In the task, participants rate 50 foods for healthiness, tastiness and choice. We are simulating this data below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Define blocks and trial structure</span>
+<span class="n">blocks</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;health&#39;</span><span class="p">,</span> <span class="s1">&#39;taste&#39;</span><span class="p">,</span> <span class="s1">&#39;choice&#39;</span><span class="p">]</span>
+<span class="n">trials_per_block</span> <span class="o">=</span> <span class="mi">75</span>
+<span class="n">participants</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+
+<span class="c1"># Generate 50 unique foods</span>
+<span class="n">base_foods</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;burger&#39;</span><span class="p">,</span> <span class="s1">&#39;carrot&#39;</span><span class="p">,</span> <span class="s1">&#39;donut&#39;</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;fries&#39;</span><span class="p">,</span> <span class="s1">&#39;grapes&#39;</span><span class="p">,</span> <span class="s1">&#39;ice cream&#39;</span><span class="p">,</span> <span class="s1">&#39;kale&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;pizza&#39;</span><span class="p">,</span> <span class="s1">&#39;yogurt&#39;</span><span class="p">,</span> <span class="s1">&#39;spinach&#39;</span><span class="p">,</span> <span class="s1">&#39;steak&#39;</span><span class="p">,</span> <span class="s1">&#39;candy&#39;</span><span class="p">,</span> <span class="s1">&#39;popcorn&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="p">,</span> <span class="s1">&#39;nuts&#39;</span><span class="p">,</span> <span class="s1">&#39;cheese&#39;</span><span class="p">,</span> <span class="s1">&#39;chicken&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;broccoli&#39;</span><span class="p">,</span> <span class="s1">&#39;chocolate&#39;</span><span class="p">,</span> <span class="s1">&#39;granola&#39;</span><span class="p">,</span> <span class="s1">&#39;lettuce&#39;</span><span class="p">,</span> <span class="s1">&#39;pasta&#39;</span><span class="p">,</span> <span class="s1">&#39;salmon&#39;</span><span class="p">,</span> <span class="s1">&#39;tofu&#39;</span><span class="p">,</span> <span class="s1">&#39;soda&#39;</span><span class="p">,</span> <span class="s1">&#39;rice&#39;</span><span class="p">,</span> <span class="s1">&#39;beans&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;cucumber&#39;</span><span class="p">,</span> <span class="s1">&#39;peach&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;cereal&#39;</span><span class="p">,</span> <span class="s1">&#39;toast&#39;</span><span class="p">,</span> <span class="s1">&#39;avocado&#39;</span><span class="p">,</span> <span class="s1">&#39;beef&#39;</span><span class="p">,</span> <span class="s1">&#39;peanut butter&#39;</span><span class="p">,</span> <span class="s1">&#39;cake&#39;</span><span class="p">,</span> <span class="s1">&#39;milk&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;watermelon&#39;</span><span class="p">,</span> <span class="s1">&#39;pear&#39;</span><span class="p">,</span> <span class="s1">&#39;turkey&#39;</span><span class="p">,</span> <span class="s1">&#39;onion rings&#39;</span><span class="p">,</span> <span class="s1">&#39;oatmeal&#39;</span><span class="p">,</span> <span class="s1">&#39;cranberries&#39;</span><span class="p">,</span> <span class="s1">&#39;syrup&#39;</span><span class="p">,</span> <span class="s1">&#39;waffles&#39;</span><span class="p">,</span> <span class="s1">&#39;cookie&#39;</span><span class="p">,</span> <span class="s1">&#39;shrimp&#39;</span>
+<span class="p">]</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">base_foods</span><span class="p">)</span> <span class="o">==</span> <span class="mi">50</span>
+
+<span class="c1"># Assign fat and sugar levels randomly</span>
+<span class="n">food_properties</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">food</span> <span class="ow">in</span> <span class="n">base_foods</span><span class="p">:</span>
+    <span class="n">fat</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">([</span><span class="s1">&#39;high&#39;</span><span class="p">,</span> <span class="s1">&#39;low&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="o">=</span><span class="p">[</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">sugar</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">([</span><span class="s1">&#39;high&#39;</span><span class="p">,</span> <span class="s1">&#39;low&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">food_properties</span><span class="p">[</span><span class="n">food</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fat&#39;</span><span class="p">:</span> <span class="n">fat</span><span class="p">,</span> <span class="s1">&#39;sugar&#39;</span><span class="p">:</span> <span class="n">sugar</span><span class="p">}</span>
+
+<span class="c1"># Generate trials</span>
+<span class="n">all_trials</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">blocks</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">trial_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">trials_per_block</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">food</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">base_foods</span><span class="p">)</span>
+            <span class="n">rt_missing</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.02</span>  <span class="c1"># 2% chance of missing RT</span>
+            <span class="n">reaction_time</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">rt_missing</span> <span class="k">else</span> <span class="nb">round</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">rating</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">reaction_time</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+            <span class="n">fat</span> <span class="o">=</span> <span class="n">food_properties</span><span class="p">[</span><span class="n">food</span><span class="p">][</span><span class="s1">&#39;fat&#39;</span><span class="p">]</span>
+            <span class="n">sugar</span> <span class="o">=</span> <span class="n">food_properties</span><span class="p">[</span><span class="n">food</span><span class="p">][</span><span class="s1">&#39;sugar&#39;</span><span class="p">]</span>
+
+            <span class="n">trial</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;participant&#39;</span><span class="p">:</span> <span class="n">participant</span><span class="p">,</span>
+                <span class="s1">&#39;block&#39;</span><span class="p">:</span> <span class="n">block</span><span class="p">,</span>
+                <span class="s1">&#39;trial_number&#39;</span><span class="p">:</span> <span class="n">trial_num</span><span class="p">,</span>
+                <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="n">food</span><span class="p">,</span>
+                <span class="s1">&#39;reaction_time&#39;</span><span class="p">:</span> <span class="n">reaction_time</span><span class="p">,</span>
+                <span class="s1">&#39;rating&#39;</span><span class="p">:</span> <span class="n">rating</span><span class="p">,</span>
+                <span class="s1">&#39;fat&#39;</span><span class="p">:</span> <span class="n">fat</span><span class="p">,</span>
+                <span class="s1">&#39;sugar&#39;</span><span class="p">:</span> <span class="n">sugar</span>
+            <span class="p">}</span>
+            <span class="n">all_trials</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trial</span><span class="p">)</span>
+
+<span class="c1"># Create DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_trials</span><span class="p">)</span>
+
+<span class="c1"># Validate logic: rating is only missing if RT is missing</span>
+<span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()][</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-data-are-stored-in-a-dataframe-object-which-we-have-called-df">
+<h1>The data are stored in a dataframe object, which we have called df<a class="headerlink" href="#the-data-are-stored-in-a-dataframe-object-which-we-have-called-df" title="Link to this heading">#</a></h1>
+<p>To access items in the dataframe, we need to type “df”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#If we want to see the data, we can just type</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>participant</th>
+      <th>block</th>
+      <th>trial_number</th>
+      <th>food</th>
+      <th>reaction_time</th>
+      <th>rating</th>
+      <th>fat</th>
+      <th>sugar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>health</td>
+      <td>1</td>
+      <td>pear</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>low</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>health</td>
+      <td>2</td>
+      <td>chocolate</td>
+      <td>1.48</td>
+      <td>5.0</td>
+      <td>low</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>health</td>
+      <td>3</td>
+      <td>spinach</td>
+      <td>0.55</td>
+      <td>9.0</td>
+      <td>high</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>health</td>
+      <td>4</td>
+      <td>granola</td>
+      <td>1.45</td>
+      <td>2.0</td>
+      <td>low</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>health</td>
+      <td>5</td>
+      <td>milk</td>
+      <td>1.64</td>
+      <td>7.0</td>
+      <td>low</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>4495</th>
+      <td>20</td>
+      <td>choice</td>
+      <td>71</td>
+      <td>grapes</td>
+      <td>1.72</td>
+      <td>7.0</td>
+      <td>high</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>4496</th>
+      <td>20</td>
+      <td>choice</td>
+      <td>72</td>
+      <td>donut</td>
+      <td>1.53</td>
+      <td>5.0</td>
+      <td>low</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>4497</th>
+      <td>20</td>
+      <td>choice</td>
+      <td>73</td>
+      <td>turkey</td>
+      <td>1.50</td>
+      <td>7.0</td>
+      <td>low</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>4498</th>
+      <td>20</td>
+      <td>choice</td>
+      <td>74</td>
+      <td>pear</td>
+      <td>3.41</td>
+      <td>10.0</td>
+      <td>low</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>4499</th>
+      <td>20</td>
+      <td>choice</td>
+      <td>75</td>
+      <td>grapes</td>
+      <td>2.40</td>
+      <td>1.0</td>
+      <td>high</td>
+      <td>low</td>
+    </tr>
+  </tbody>
+</table>
+<p>4500 rows × 8 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To see anything in df we will need to reference df first</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;participant&#39;, &#39;block&#39;, &#39;trial_number&#39;, &#39;food&#39;, &#39;reaction_time&#39;,
+       &#39;rating&#39;, &#39;fat&#39;, &#39;sugar&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We can also look at the values of columns</span>
+<span class="c1"># All of these will access the food column</span>
+<span class="n">df</span><span class="o">.</span><span class="n">food</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;food&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0            pear
+1       chocolate
+2         spinach
+3         granola
+4            milk
+          ...    
+4495       grapes
+4496        donut
+4497       turkey
+4498         pear
+4499       grapes
+Name: food, Length: 4500, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try here with RT</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To analyze this data, we will first need to remove any missing trials</span>
+<span class="c1"># let&#39;s find the missing values</span>
+<span class="n">df</span><span class="o">.</span><span class="n">reaction_time</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">reaction_time</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">==</span><span class="kc">True</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      NaN
+144    NaN
+176    NaN
+264    NaN
+295    NaN
+        ..
+3937   NaN
+3999   NaN
+4289   NaN
+4372   NaN
+4403   NaN
+Name: reaction_time, Length: 78, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">reaction_time</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">reaction_time</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="c1"># What would we change to see RTs &lt; 2 only?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6       3.57
+8       3.89
+10      3.91
+12      3.80
+13      3.79
+        ... 
+4487    3.49
+4489    3.10
+4491    3.36
+4492    3.25
+4498    3.41
+Name: reaction_time, Length: 1247, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a new data frame with no missing values</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">reaction_time</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">==</span><span class="kc">True</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now we want to perform some calculations on this data-set</span>
+<span class="c1"># let&#39;s start by summarizing, for one person the health rating</span>
+
+<span class="c1"># Filter for participant 1 and the &#39;health&#39; block</span>
+<span class="n">participant_id</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">health_block</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;participant&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">participant_id</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;block&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;health&#39;</span><span class="p">)]</span>
+
+<span class="c1"># Remove missing ratings (i.e., where RT was missing)</span>
+<span class="n">valid_ratings</span> <span class="o">=</span> <span class="n">health_block</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="c1"># Calculate the average health rating</span>
+<span class="n">average_health_rating</span> <span class="o">=</span> <span class="n">valid_ratings</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Participant </span><span class="si">{</span><span class="n">participant_id</span><span class="si">}</span><span class="s2">&#39;s average health rating: </span><span class="si">{</span><span class="n">average_health_rating</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Participant 1&#39;s average health rating: 5.73
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Try for health only for low and high-fat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Now let&#39;s create a new dataframe and store each persons average RT and rating for high and low fat foods</span>
+
+<span class="c1"># Group by participant, block, and fat level</span>
+<span class="n">summary_df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df</span>
+    <span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;reaction_time&#39;</span><span class="p">])</span>  <span class="c1"># Exclude trials with missing values</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;participant&#39;</span><span class="p">,</span> <span class="s1">&#39;block&#39;</span><span class="p">,</span> <span class="s1">&#39;fat&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+        <span class="n">average_rating</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">),</span>
+        <span class="n">average_reaction_time</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;reaction_time&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">),</span>
+        <span class="n">trial_count</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">)</span>  <span class="c1"># Optional: to see how many valid trials per group</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">summary_df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   participant   block   fat  average_rating  average_reaction_time  \
+0            1  choice  high        4.916667               2.363333   
+1            1  choice   low        5.160000               2.305000   
+2            1  health  high        5.041667               2.400417   
+3            1  health   low        6.060000               2.413800   
+4            1   taste  high        5.636364               2.033636   
+
+   trial_count  
+0           24  
+1           50  
+2           24  
+3           50  
+4           22  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pivot to wide format</span>
+<span class="n">wide_df</span> <span class="o">=</span> <span class="n">summary_df</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+    <span class="n">index</span><span class="o">=</span><span class="s1">&#39;participant&#39;</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;block&#39;</span><span class="p">,</span> <span class="s1">&#39;fat&#39;</span><span class="p">],</span>
+    <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;average_rating&#39;</span><span class="p">,</span> <span class="s1">&#39;average_reaction_time&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 3: Flatten column names</span>
+<span class="n">wide_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">stat</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">block</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">fat</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">stat</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">fat</span> <span class="ow">in</span> <span class="n">wide_df</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+<span class="n">wide_df</span> <span class="o">=</span> <span class="n">wide_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">wide_df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   participant  average_rating_choice_high  average_rating_choice_low  \
+0            1                    4.916667                   5.160000   
+1            2                    5.590909                   5.224490   
+2            3                    4.562500                   5.375000   
+3            4                    5.076923                   5.833333   
+4            5                    5.892857                   5.086957   
+
+   average_rating_health_high  average_rating_health_low  \
+0                    5.041667                   6.060000   
+1                    5.129032                   6.119048   
+2                    5.400000                   5.918367   
+3                    5.100000                   5.382353   
+4                    5.933333                   5.681818   
+
+   average_rating_taste_high  average_rating_taste_low  \
+0                   5.636364                  6.115385   
+1                   4.794118                  5.300000   
+2                   4.750000                  5.688889   
+3                   5.533333                  5.744186   
+4                   5.176471                  5.707317   
+
+   average_reaction_time_choice_high  average_reaction_time_choice_low  \
+0                           2.363333                          2.305000   
+1                           2.496364                          2.296939   
+2                           2.243438                          2.306500   
+3                           2.131538                          2.313958   
+4                           2.653214                          2.279783   
+
+   average_reaction_time_health_high  average_reaction_time_health_low  \
+0                           2.400417                          2.413800   
+1                           2.404194                          2.221429   
+2                           2.398000                          2.442857   
+3                           2.287000                          2.072353   
+4                           2.702667                          2.269318   
+
+   average_reaction_time_taste_high  average_reaction_time_taste_low  
+0                          2.033636                         2.077885  
+1                          2.007647                         2.517500  
+2                          2.366429                         2.229778  
+3                          2.497000                         2.303256  
+4                          2.438235                         2.510976  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here try and simulate a different dataset - a monetary choice task where the participant</span>
+<span class="c1"># selects between an immediate vs delayed reward. Compare the RT between when the participant</span>
+<span class="c1"># chooses the immediate vs delayed option</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># navigate to the directory</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">wd</span><span class="o">=</span><span class="s2">&quot;/Users/emilylloyd/Documents/Coding Course&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">wd</span><span class="p">)</span>
+<span class="c1">#read the dataset in</span>
+<span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;DelayDisc_example.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># figure out whether left or right column is delayed (1 is left, 2 is right)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;delayed_opt&#39;</span><span class="p">]</span><span class="o">=</span> <span class="s2">&quot;none&quot;</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;delay_left&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;delay_right&#39;</span><span class="p">],</span><span class="s1">&#39;delayed_opt&#39;</span><span class="p">]</span> <span class="o">==</span><span class="mi">2</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;delay_left&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;delay_right&#39;</span><span class="p">],</span><span class="s1">&#39;delayed_opt&#39;</span><span class="p">]</span> <span class="o">==</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      False
+1      False
+2      False
+3      False
+4      False
+       ...  
+109    False
+111    False
+112    False
+114    False
+117    False
+Name: delayed_opt, Length: 62, dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now summarize the RT for each person when they chose delayed vs chose sooner reward</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="this-is-the-homework-exercise">
+<h1>This is the homework exercise<a class="headerlink" href="#this-is-the-homework-exercise" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here calculate the average earnings per person and the number of times they chose delayed vs sooner</span>
+
+<span class="c1">## Upload solution to Github</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="extra">
+<h1>Extra<a class="headerlink" href="#extra" title="Link to this heading">#</a></h1>
+<section id="these-are-hard-exercises-not-homework-for-extra-practice">
+<h2>These are hard exercises - not homework, for extra practice<a class="headerlink" href="#these-are-hard-exercises-not-homework-for-extra-practice" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hard</span>
+
+<span class="c1"># Here simulate your own Delay Discounting Task and calculate some average metrics</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Very hard</span>
+<span class="c1"># One outcome of interest is the discount rate, k, which denotes extent to which someone discounts</span>
+<span class="c1"># value of delayed rewards (higher values = less patient)</span>
+
+<span class="c1"># Here you can use chatGPT to get the formula for k - see whether you can calculate for each person</span>
+<span class="c1"># in your dataset</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="introduction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome!</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="python_week2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python Session 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Session 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-will-practice-cleaning-some-food-choice-task-data">We will practice cleaning some Food choice task data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-data-are-stored-in-a-dataframe-object-which-we-have-called-df">The data are stored in a dataframe object, which we have called df</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-the-homework-exercise">This is the homework exercise</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extra">Extra</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#these-are-hard-exercises-not-homework-for-extra-practice">These are hard exercises - not homework, for extra practice</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. L
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,983 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Jupyter Book for Psychology Programming Course</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Data_sims';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Jupyter Book for Psychology Programming Course - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Jupyter Book for Psychology Programming Course - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Welcome!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_week1.html">Python Session 1</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="python_week2.html">Python Session 2</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/CaitlinLloyd/Programming_for_Psychology/blob/master/Data_sims.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/CaitlinLloyd/Programming_for_Psychology" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/CaitlinLloyd/Programming_for_Psychology/issues/new?title=Issue%20on%20page%20%2FData_sims.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Data_sims.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="c1"># Define blocks and trial structure</span>
+<span class="n">blocks</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;health&#39;</span><span class="p">,</span> <span class="s1">&#39;taste&#39;</span><span class="p">,</span> <span class="s1">&#39;choice&#39;</span><span class="p">]</span>
+<span class="n">trials_per_block</span> <span class="o">=</span> <span class="mi">75</span>
+<span class="n">participants</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">41</span><span class="p">)</span>
+
+<span class="c1"># Generate 50 unique foods</span>
+<span class="n">base_foods</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;burger&#39;</span><span class="p">,</span> <span class="s1">&#39;carrot&#39;</span><span class="p">,</span> <span class="s1">&#39;donut&#39;</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="s1">&#39;fries&#39;</span><span class="p">,</span> <span class="s1">&#39;grapes&#39;</span><span class="p">,</span> <span class="s1">&#39;ice cream&#39;</span><span class="p">,</span> <span class="s1">&#39;kale&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;pizza&#39;</span><span class="p">,</span> <span class="s1">&#39;yogurt&#39;</span><span class="p">,</span> <span class="s1">&#39;spinach&#39;</span><span class="p">,</span> <span class="s1">&#39;steak&#39;</span><span class="p">,</span> <span class="s1">&#39;candy&#39;</span><span class="p">,</span> <span class="s1">&#39;popcorn&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="p">,</span> <span class="s1">&#39;nuts&#39;</span><span class="p">,</span> <span class="s1">&#39;cheese&#39;</span><span class="p">,</span> <span class="s1">&#39;chicken&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;broccoli&#39;</span><span class="p">,</span> <span class="s1">&#39;chocolate&#39;</span><span class="p">,</span> <span class="s1">&#39;granola&#39;</span><span class="p">,</span> <span class="s1">&#39;lettuce&#39;</span><span class="p">,</span> <span class="s1">&#39;pasta&#39;</span><span class="p">,</span> <span class="s1">&#39;salmon&#39;</span><span class="p">,</span> <span class="s1">&#39;tofu&#39;</span><span class="p">,</span> <span class="s1">&#39;soda&#39;</span><span class="p">,</span> <span class="s1">&#39;rice&#39;</span><span class="p">,</span> <span class="s1">&#39;beans&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;cucumber&#39;</span><span class="p">,</span> <span class="s1">&#39;peach&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">,</span> <span class="s1">&#39;cereal&#39;</span><span class="p">,</span> <span class="s1">&#39;toast&#39;</span><span class="p">,</span> <span class="s1">&#39;avocado&#39;</span><span class="p">,</span> <span class="s1">&#39;beef&#39;</span><span class="p">,</span> <span class="s1">&#39;peanut butter&#39;</span><span class="p">,</span> <span class="s1">&#39;cake&#39;</span><span class="p">,</span> <span class="s1">&#39;milk&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;watermelon&#39;</span><span class="p">,</span> <span class="s1">&#39;pear&#39;</span><span class="p">,</span> <span class="s1">&#39;turkey&#39;</span><span class="p">,</span> <span class="s1">&#39;onion rings&#39;</span><span class="p">,</span> <span class="s1">&#39;oatmeal&#39;</span><span class="p">,</span> <span class="s1">&#39;cranberries&#39;</span><span class="p">,</span> <span class="s1">&#39;syrup&#39;</span><span class="p">,</span> <span class="s1">&#39;waffles&#39;</span><span class="p">,</span> <span class="s1">&#39;cookie&#39;</span><span class="p">,</span> <span class="s1">&#39;shrimp&#39;</span>
+<span class="p">]</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">base_foods</span><span class="p">)</span> <span class="o">==</span> <span class="mi">50</span>
+
+
+<span class="c1"># Assign fat and sugar levels randomly</span>
+<span class="n">food_properties</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">food</span> <span class="ow">in</span> <span class="n">base_foods</span><span class="p">:</span>
+    <span class="n">fat</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">([</span><span class="s1">&#39;high&#39;</span><span class="p">,</span> <span class="s1">&#39;low&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="o">=</span><span class="p">[</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">sugar</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">([</span><span class="s1">&#39;high&#39;</span><span class="p">,</span> <span class="s1">&#39;low&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">food_properties</span><span class="p">[</span><span class="n">food</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fat&#39;</span><span class="p">:</span> <span class="n">fat</span><span class="p">,</span> <span class="s1">&#39;sugar&#39;</span><span class="p">:</span> <span class="n">sugar</span><span class="p">}</span>
+
+<span class="c1"># Generate trials</span>
+<span class="n">all_trials</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">blocks</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">trial_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">trials_per_block</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">food</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">base_foods</span><span class="p">)</span>
+            <span class="n">rt_missing</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.02</span>  <span class="c1"># 2% chance of missing RT</span>
+            <span class="n">reaction_time</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">rt_missing</span> <span class="k">else</span> <span class="nb">round</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">rating</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">reaction_time</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+            <span class="n">fat</span> <span class="o">=</span> <span class="n">food_properties</span><span class="p">[</span><span class="n">food</span><span class="p">][</span><span class="s1">&#39;fat&#39;</span><span class="p">]</span>
+            <span class="n">sugar</span> <span class="o">=</span> <span class="n">food_properties</span><span class="p">[</span><span class="n">food</span><span class="p">][</span><span class="s1">&#39;sugar&#39;</span><span class="p">]</span>
+
+            <span class="n">trial</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;ID&#39;</span><span class="p">:</span> <span class="n">participant</span><span class="p">,</span>
+                <span class="s1">&#39;block&#39;</span><span class="p">:</span> <span class="n">block</span><span class="p">,</span>
+                <span class="s1">&#39;trial_number&#39;</span><span class="p">:</span> <span class="n">trial_num</span><span class="p">,</span>
+                <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="n">food</span><span class="p">,</span>
+                <span class="s1">&#39;reaction_time&#39;</span><span class="p">:</span> <span class="n">reaction_time</span><span class="p">,</span>
+                <span class="s1">&#39;rating&#39;</span><span class="p">:</span> <span class="n">rating</span><span class="p">,</span>
+                <span class="s1">&#39;fat&#39;</span><span class="p">:</span> <span class="n">fat</span><span class="p">,</span>
+                <span class="s1">&#39;sugar&#39;</span><span class="p">:</span> <span class="n">sugar</span>
+            <span class="p">}</span>
+            <span class="n">all_trials</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trial</span><span class="p">)</span>
+
+<span class="c1"># Create DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_trials</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># demo frame</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Set seed for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Number of individuals</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">40</span>
+
+<span class="c1"># Generate IDs</span>
+<span class="n">ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># Generate Age (18 to 65)</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+
+<span class="c1"># Patient status: 50% patients</span>
+<span class="n">patient_status</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;Yes&#39;</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
+
+<span class="c1"># Medication: 60% of patients are on medication, 20% of non-patients</span>
+<span class="n">medication</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Yes&#39;</span> <span class="k">if</span> <span class="p">(</span><span class="n">pat</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.6</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">pat</span> <span class="o">==</span> <span class="s1">&#39;No&#39;</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.2</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No&#39;</span>
+    <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">patient_status</span>
+<span class="p">]</span>
+
+<span class="c1"># BMI: lower for patients (mean 17.5) vs non-patients (mean 23.5)</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">17.5</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">pat</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span> <span class="k">else</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">23.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">patient_status</span>
+<span class="p">]</span>
+
+<span class="c1"># Lunch intake values</span>
+<span class="n">fat</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span> <span class="k">if</span> <span class="n">pat</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span> <span class="k">else</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">patient_status</span><span class="p">]</span>
+<span class="n">calories</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">320</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span> <span class="k">if</span> <span class="n">pat</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span> <span class="k">else</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">650</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span> <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">patient_status</span><span class="p">]</span>
+<span class="n">protein</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span> <span class="k">if</span> <span class="n">pat</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span> <span class="k">else</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span> <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">patient_status</span><span class="p">]</span>
+<span class="n">sugar</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="k">if</span> <span class="n">pat</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span> <span class="k">else</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span> <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">patient_status</span><span class="p">]</span>
+
+<span class="c1"># EDE Global Score: higher for patients (mean 4.5), lower for non-patients (mean 1.0)</span>
+<span class="n">ede_score</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">4.5</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">pat</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span> <span class="k">else</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">patient_status</span>
+<span class="p">]</span>
+
+<span class="c1"># Duration of illness for patients, blank for non-patients</span>
+<span class="n">duration</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">pat</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">patient_status</span>
+<span class="p">]</span>
+
+<span class="c1"># Assemble the DataFrame</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;ID&#39;</span><span class="p">:</span> <span class="n">ids</span><span class="p">,</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="n">ages</span><span class="p">,</span>
+    <span class="s1">&#39;Patient&#39;</span><span class="p">:</span> <span class="n">patient_status</span><span class="p">,</span>
+    <span class="s1">&#39;Medication&#39;</span><span class="p">:</span> <span class="n">medication</span><span class="p">,</span>
+    <span class="s1">&#39;BMI&#39;</span><span class="p">:</span> <span class="n">bmi</span><span class="p">,</span>
+    <span class="s1">&#39;Fat (g)&#39;</span><span class="p">:</span> <span class="n">fat</span><span class="p">,</span>
+    <span class="s1">&#39;Calories&#39;</span><span class="p">:</span> <span class="n">calories</span><span class="p">,</span>
+    <span class="s1">&#39;Protein (g)&#39;</span><span class="p">:</span> <span class="n">protein</span><span class="p">,</span>
+    <span class="s1">&#39;Sugar (g)&#39;</span><span class="p">:</span> <span class="n">sugar</span><span class="p">,</span>
+    <span class="s1">&#39;EDE Score&#39;</span><span class="p">:</span> <span class="n">ede_score</span><span class="p">,</span>
+    <span class="s1">&#39;Duration of Illness&#39;</span><span class="p">:</span> <span class="n">duration</span>
+<span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    ID  Age Patient Medication   BMI  Fat (g)  Calories  Protein (g)  \
+0    1   56     Yes        Yes  17.9        6       365            4   
+1    2   46     Yes        Yes  18.6        9       306           12   
+2    3   32      No        Yes  22.3       24       635           36   
+3    4   60      No         No  22.9       32       456           27   
+4    5   25     Yes         No  15.7       11       332           16   
+5    6   38     Yes         No  17.2       12       318            9   
+6    7   56     Yes         No  18.7       14       213            8   
+7    8   36     Yes         No  17.2       14       317           10   
+8    9   40      No         No  22.0       25       784           23   
+9   10   28      No         No  22.8       19       576           22   
+10  11   28      No         No  24.9       28       554           32   
+11  12   41     Yes        Yes  17.2       13       408           21   
+12  13   53     Yes        Yes  18.5        7       370           11   
+13  14   57     Yes         No  15.9        9       564            7   
+14  15   41      No         No  21.8       29       518           33   
+15  16   20     Yes        Yes  16.9       14       377            8   
+16  17   39     Yes        Yes  15.9        9       345            9   
+17  18   19      No         No  29.4       23       655           32   
+18  19   41     Yes        Yes  16.2       11       392           13   
+19  20   61      No         No  25.3       28       647           25   
+20  21   47     Yes         No  16.7       16       165           14   
+21  22   55     Yes         No  16.9       12       252           12   
+22  23   19      No         No  24.1       30       786           41   
+23  24   38      No         No  20.6       29       767           25   
+24  25   50     Yes        Yes  16.7       12       290           10   
+25  26   29      No         No  23.2       17       700           27   
+26  27   39      No        Yes  21.8       19       928           27   
+27  28   61      No         No  21.9       28       646           33   
+28  29   42      No         No  25.7       16       648           18   
+29  30   44      No         No  25.5       25       669           32   
+30  31   59      No         No  22.6       30       710           26   
+31  32   45      No         No  23.3       25       615           34   
+32  33   33      No         No  26.0       21       710           29   
+33  34   32      No        Yes  20.6       20       455           33   
+34  35   64     Yes         No  17.9       15       346           12   
+35  36   61     Yes        Yes  19.9       13       324           15   
+36  37   20     Yes        Yes  19.9       10       302           20   
+37  38   54     Yes         No  15.2       16       281           11   
+38  39   24     Yes        Yes  16.6       15       271           13   
+39  40   38     Yes         No  17.7       19       254           12   
+
+    Sugar (g)  EDE Score Duration of Illness  
+0          25        4.9                 1.9  
+1          15        5.3                 1.5  
+2          20        0.6                      
+3          21        0.5                      
+4          17        4.1                 9.6  
+5          14        3.5                 8.6  
+6          16        4.6                 4.2  
+7          18        4.2                 9.6  
+8          24        1.7                      
+9          29        0.2                      
+10         23        1.9                      
+11         16        3.7                 7.1  
+12         19        3.5                 5.3  
+13         29        3.8                 5.4  
+14         20        2.2                      
+15         27        4.5                 1.7  
+16         12        4.9                 1.8  
+17         26        0.9                      
+18         16        4.4                 6.4  
+19         20        0.7                      
+20         21        4.5                 6.0  
+21         20        4.9                 2.9  
+22         22        2.0                      
+23         12       -0.1                      
+24         15        5.8                 9.5  
+25         25        1.3                      
+26         25        0.8                      
+27         29        0.7                      
+28         36        1.6                      
+29         27        1.1                      
+30         28        0.1                      
+31         25        1.2                      
+32         32        1.7                      
+33         28        1.5                      
+34         21        4.0                 8.0  
+35         27        3.4                 2.0  
+36         19        4.2                 9.4  
+37         16        7.1                 9.8  
+38         20        3.3                10.0  
+39         23        3.8                 1.5  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;/Users/emilylloyd/Documents/Coding Course/FCT_df.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;/Users/emilylloyd/Documents/Coding Course/demo.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate the DD data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">n_participants</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">n_trials</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;control&#39;</span><span class="p">,</span> <span class="s1">&#39;future&#39;</span><span class="p">]</span>
+<span class="n">groups</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;control&#39;</span><span class="p">,</span> <span class="s1">&#39;SUD&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create participant-level data</span>
+<span class="n">participants</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_participants</span><span class="p">):</span>
+    <span class="n">pid</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="s1">&#39;SUD&#39;</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n_participants</span> <span class="o">/</span> <span class="mi">2</span> <span class="k">else</span> <span class="s1">&#39;control&#39;</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">impulsivity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.5</span> <span class="k">if</span> <span class="n">group</span> <span class="o">==</span> <span class="s1">&#39;SUD&#39;</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+    
+    <span class="n">participants</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;participant_id&#39;</span><span class="p">:</span> <span class="n">pid</span><span class="p">,</span> <span class="s1">&#39;group&#39;</span><span class="p">:</span> <span class="n">group</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span> <span class="s1">&#39;impulsivity&#39;</span><span class="p">:</span> <span class="n">impulsivity</span><span class="p">})</span>
+
+<span class="n">df_demo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>
+
+<span class="c1"># Simulate trial-level choices</span>
+<span class="n">trials</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df_demo</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">condition</span> <span class="ow">in</span> <span class="n">conditions</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">trial</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_trials</span><span class="p">):</span>
+            <span class="n">base_prob</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+            <span class="c1"># Condition effect: future condition increases delayed choice</span>
+            <span class="k">if</span> <span class="n">condition</span> <span class="o">==</span> <span class="s1">&#39;future&#39;</span><span class="p">:</span>
+                <span class="n">base_prob</span> <span class="o">+=</span> <span class="mf">0.2</span>
+            
+            <span class="c1"># SUD effect at baseline (control condition)</span>
+            <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;SUD&#39;</span> <span class="ow">and</span> <span class="n">condition</span> <span class="o">==</span> <span class="s1">&#39;control&#39;</span><span class="p">:</span>
+                <span class="n">base_prob</span> <span class="o">-=</span> <span class="mf">0.2</span>
+            
+            <span class="c1"># Impulsivity effect: stronger in SUD group</span>
+            <span class="n">impulsivity_effect</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.1</span> <span class="o">*</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;impulsivity&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;SUD&#39;</span> <span class="k">else</span> <span class="o">-</span><span class="mf">0.05</span> <span class="o">*</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;impulsivity&#39;</span><span class="p">]</span>
+            <span class="n">prob</span> <span class="o">=</span> <span class="n">base_prob</span> <span class="o">+</span> <span class="n">impulsivity_effect</span>
+
+            <span class="c1"># Clip probability to 0–1</span>
+            <span class="n">prob</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">prob</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">)</span>
+
+            <span class="n">choice</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">prob</span><span class="p">)</span>
+
+            <span class="n">trials</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s1">&#39;participant_id&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;participant_id&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;group&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;impulsivity&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;impulsivity&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;condition&#39;</span><span class="p">:</span> <span class="n">condition</span><span class="p">,</span>
+                <span class="s1">&#39;trial&#39;</span><span class="p">:</span> <span class="n">trial</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;chose_delayed&#39;</span><span class="p">:</span> <span class="n">choice</span>
+            <span class="p">})</span>
+
+<span class="n">df_trials</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">trials</span><span class="p">)</span>
+<span class="n">df_trials</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;/Users/emilylloyd/Documents/Coding Course/DD_df.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_trials</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>participant_id</th>
+      <th>group</th>
+      <th>age</th>
+      <th>impulsivity</th>
+      <th>condition</th>
+      <th>trial</th>
+      <th>chose_delayed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>SUD</td>
+      <td>32.483571</td>
+      <td>0.361736</td>
+      <td>control</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>SUD</td>
+      <td>32.483571</td>
+      <td>0.361736</td>
+      <td>control</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>SUD</td>
+      <td>32.483571</td>
+      <td>0.361736</td>
+      <td>control</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>SUD</td>
+      <td>32.483571</td>
+      <td>0.361736</td>
+      <td>control</td>
+      <td>4</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>SUD</td>
+      <td>32.483571</td>
+      <td>0.361736</td>
+      <td>control</td>
+      <td>5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>9995</th>
+      <td>100</td>
+      <td>control</td>
+      <td>30.291044</td>
+      <td>-1.142970</td>
+      <td>future</td>
+      <td>46</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>9996</th>
+      <td>100</td>
+      <td>control</td>
+      <td>30.291044</td>
+      <td>-1.142970</td>
+      <td>future</td>
+      <td>47</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>9997</th>
+      <td>100</td>
+      <td>control</td>
+      <td>30.291044</td>
+      <td>-1.142970</td>
+      <td>future</td>
+      <td>48</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>9998</th>
+      <td>100</td>
+      <td>control</td>
+      <td>30.291044</td>
+      <td>-1.142970</td>
+      <td>future</td>
+      <td>49</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>9999</th>
+      <td>100</td>
+      <td>control</td>
+      <td>30.291044</td>
+      <td>-1.142970</td>
+      <td>future</td>
+      <td>50</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>10000 rows × 7 columns</p>
+</div></div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. L
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
