@@ -32,7 +32,7 @@ html:
   use_repository_button: true
 
 repository:
-  url: "https://github.com/CaitlinLloyd/Programming_for_Psychology"  # The URL to your book's repository
+  url: "https://github.com/CaitlinLloyd/Psychology_Programming2025"  # The URL to your book's repository
 
 
 launch_buttons:
