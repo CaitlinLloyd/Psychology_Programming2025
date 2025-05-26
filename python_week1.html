@@ -558,21 +558,21 @@ document.write(`
       <td>1</td>
       <td>health</td>
       <td>1</td>
-      <td>pear</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>low</td>
+      <td>candy</td>
+      <td>2.31</td>
+      <td>4.0</td>
       <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1</td>
       <td>health</td>
       <td>2</td>
-      <td>chocolate</td>
-      <td>1.48</td>
+      <td>cake</td>
+      <td>3.26</td>
       <td>5.0</td>
-      <td>low</td>
+      <td>high</td>
       <td>high</td>
     </tr>
     <tr>
@@ -580,10 +580,10 @@ document.write(`
       <td>1</td>
       <td>health</td>
       <td>3</td>
-      <td>spinach</td>
-      <td>0.55</td>
-      <td>9.0</td>
-      <td>high</td>
+      <td>oatmeal</td>
+      <td>2.47</td>
+      <td>7.0</td>
+      <td>low</td>
       <td>high</td>
     </tr>
     <tr>
@@ -591,22 +591,22 @@ document.write(`
       <td>1</td>
       <td>health</td>
       <td>4</td>
-      <td>granola</td>
-      <td>1.45</td>
-      <td>2.0</td>
+      <td>tofu</td>
+      <td>0.94</td>
+      <td>5.0</td>
       <td>low</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>4</th>
       <td>1</td>
       <td>health</td>
       <td>5</td>
-      <td>milk</td>
-      <td>1.64</td>
-      <td>7.0</td>
+      <td>ice cream</td>
+      <td>0.77</td>
+      <td>8.0</td>
       <td>low</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>...</th>
@@ -625,19 +625,19 @@ document.write(`
       <td>choice</td>
       <td>71</td>
       <td>grapes</td>
-      <td>1.72</td>
+      <td>1.48</td>
       <td>7.0</td>
-      <td>high</td>
       <td>low</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>4496</th>
       <td>20</td>
       <td>choice</td>
       <td>72</td>
-      <td>donut</td>
-      <td>1.53</td>
-      <td>5.0</td>
+      <td>beans</td>
+      <td>2.41</td>
+      <td>1.0</td>
       <td>low</td>
       <td>high</td>
     </tr>
@@ -646,9 +646,9 @@ document.write(`
       <td>20</td>
       <td>choice</td>
       <td>73</td>
-      <td>turkey</td>
-      <td>1.50</td>
-      <td>7.0</td>
+      <td>broccoli</td>
+      <td>2.72</td>
+      <td>5.0</td>
       <td>low</td>
       <td>high</td>
     </tr>
@@ -657,22 +657,22 @@ document.write(`
       <td>20</td>
       <td>choice</td>
       <td>74</td>
-      <td>pear</td>
-      <td>3.41</td>
-      <td>10.0</td>
-      <td>low</td>
+      <td>chocolate</td>
+      <td>1.17</td>
+      <td>9.0</td>
       <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>4499</th>
       <td>20</td>
       <td>choice</td>
       <td>75</td>
-      <td>grapes</td>
-      <td>2.40</td>
+      <td>oatmeal</td>
+      <td>0.78</td>
       <td>1.0</td>
-      <td>high</td>
       <td>low</td>
+      <td>high</td>
     </tr>
   </tbody>
 </table>
@@ -705,17 +705,17 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0            pear
-1       chocolate
-2         spinach
-3         granola
-4            milk
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0           candy
+1            cake
+2         oatmeal
+3            tofu
+4       ice cream
           ...    
 4495       grapes
-4496        donut
-4497       turkey
-4498         pear
-4499       grapes
+4496        beans
+4497     broccoli
+4498    chocolate
+4499      oatmeal
 Name: food, Length: 4500, dtype: object
 </pre></div>
 </div>
@@ -737,18 +737,18 @@ Name: food, Length: 4500, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      NaN
-144    NaN
-176    NaN
-264    NaN
-295    NaN
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47     NaN
+60     NaN
+70     NaN
+113    NaN
+305    NaN
         ..
-3937   NaN
-3999   NaN
-4289   NaN
-4372   NaN
-4403   NaN
-Name: reaction_time, Length: 78, dtype: float64
+4182   NaN
+4218   NaN
+4227   NaN
+4303   NaN
+4344   NaN
+Name: reaction_time, Length: 88, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -762,18 +762,18 @@ Name: reaction_time, Length: 78, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6       3.57
-8       3.89
-10      3.91
-12      3.80
-13      3.79
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1       3.26
+15      3.13
+16      3.21
+17      3.06
+20      3.37
         ... 
-4487    3.49
-4489    3.10
-4491    3.36
-4492    3.25
-4498    3.41
-Name: reaction_time, Length: 1247, dtype: float64
+4487    3.85
+4488    3.23
+4492    3.34
+4493    3.62
+4494    3.97
+Name: reaction_time, Length: 1272, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -806,7 +806,7 @@ Name: reaction_time, Length: 1247, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Participant 1&#39;s average health rating: 5.73
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Participant 1&#39;s average health rating: 5.50
 </pre></div>
 </div>
 </div>
@@ -841,18 +841,18 @@ Name: reaction_time, Length: 1247, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   participant   block   fat  average_rating  average_reaction_time  \
-0            1  choice  high        4.916667               2.363333   
-1            1  choice   low        5.160000               2.305000   
-2            1  health  high        5.041667               2.400417   
-3            1  health   low        6.060000               2.413800   
-4            1   taste  high        5.636364               2.033636   
+0            1  choice  high        5.444444               2.436944   
+1            1  choice   low        5.153846               2.355641   
+2            1  health  high        6.250000               2.582143   
+3            1  health   low        5.022727               2.031818   
+4            1   taste  high        5.722222               2.496389   
 
    trial_count  
-0           24  
-1           50  
-2           24  
-3           50  
-4           22  
+0           36  
+1           39  
+2           28  
+3           44  
+4           36  
 </pre></div>
 </div>
 </div>
@@ -881,46 +881,46 @@ Name: reaction_time, Length: 1247, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   participant  average_rating_choice_high  average_rating_choice_low  \
-0            1                    4.916667                   5.160000   
-1            2                    5.590909                   5.224490   
-2            3                    4.562500                   5.375000   
-3            4                    5.076923                   5.833333   
-4            5                    5.892857                   5.086957   
+0            1                    5.444444                   5.153846   
+1            2                    5.424242                   6.100000   
+2            3                    5.882353                   5.850000   
+3            4                    5.787879                   5.100000   
+4            5                    5.206897                   5.222222   
 
    average_rating_health_high  average_rating_health_low  \
-0                    5.041667                   6.060000   
-1                    5.129032                   6.119048   
-2                    5.400000                   5.918367   
-3                    5.100000                   5.382353   
-4                    5.933333                   5.681818   
+0                    6.250000                   5.022727   
+1                    4.827586                   5.565217   
+2                    5.107143                   4.466667   
+3                    5.781250                   5.238095   
+4                    5.612903                   5.395349   
 
    average_rating_taste_high  average_rating_taste_low  \
-0                   5.636364                  6.115385   
-1                   4.794118                  5.300000   
-2                   4.750000                  5.688889   
-3                   5.533333                  5.744186   
-4                   5.176471                  5.707317   
+0                   5.722222                  6.026316   
+1                   5.296296                  5.333333   
+2                   4.733333                  5.681818   
+3                   5.578947                  6.113208   
+4                   5.040000                  5.208333   
 
    average_reaction_time_choice_high  average_reaction_time_choice_low  \
-0                           2.363333                          2.305000   
-1                           2.496364                          2.296939   
-2                           2.243438                          2.306500   
-3                           2.131538                          2.313958   
-4                           2.653214                          2.279783   
+0                           2.436944                          2.355641   
+1                           2.276667                          2.326250   
+2                           1.915294                          2.359250   
+3                           2.414848                          2.305250   
+4                           2.189655                          1.906222   
 
    average_reaction_time_health_high  average_reaction_time_health_low  \
-0                           2.400417                          2.413800   
-1                           2.404194                          2.221429   
-2                           2.398000                          2.442857   
-3                           2.287000                          2.072353   
-4                           2.702667                          2.269318   
+0                           2.582143                          2.031818   
+1                           2.232069                          1.883696   
+2                           2.417143                          2.353778   
+3                           2.465313                          2.578333   
+4                           2.414839                          2.119535   
 
    average_reaction_time_taste_high  average_reaction_time_taste_low  
-0                          2.033636                         2.077885  
-1                          2.007647                         2.517500  
-2                          2.366429                         2.229778  
-3                          2.497000                         2.303256  
-4                          2.438235                         2.510976  
+0                          2.496389                         2.241316  
+1                          2.418148                         2.351778  
+2                          2.618667                         2.315227  
+3                          2.301053                         2.203396  
+4                          1.946800                         2.016875  
 </pre></div>
 </div>
 </div>
@@ -942,6 +942,72 @@ Name: reaction_time, Length: 1247, dtype: float64
 <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">wd</span><span class="p">)</span>
 <span class="c1">#read the dataset in</span>
 <span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;DelayDisc_example.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">wd</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">#read the dataset in</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;DelayDisc_example.csv&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1026,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1013</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1014</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>   <span class="mi">1022</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1023</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1024</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1026</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.12/site-packages/pandas/io/parsers/readers.py:620,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">617</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">619</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">620</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">622</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">623</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1620,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1617</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1619</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1620</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1880,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1878</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1879</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1880</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1881</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1882</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1883</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1884</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1885</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1886</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1887</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1888</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1889</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1890</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1891</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.12/site-packages/pandas/io/common.py:873,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">868</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">869</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">870</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">871</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">872</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">873</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">874</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">875</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">876</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">877</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">878</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">879</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">880</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">881</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">882</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;DelayDisc_example.csv&#39;
 </pre></div>
 </div>
 </div>
@@ -978,6 +1044,54 @@ Name: delayed_opt, Length: 62, dtype: bool
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File ~/miniconda3/lib/python3.12/site-packages/pandas/core/indexes/base.py:3805,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3804</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3805</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3806</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File index.pyx:167,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File index.pyx:196,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7081,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7089,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: &#39;delayed_opt&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">60</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;delayed_opt&#39;</span><span class="p">]</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.12/site-packages/pandas/core/frame.py:4102,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4100</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">4101</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">4102</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4103</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">4104</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.12/site-packages/pandas/core/indexes/base.py:3812,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3807</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">3808</span>         <span class="nb">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span> <span class="n">abc</span><span class="o">.</span><span class="n">Iterable</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3809</span>         <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3810</span>     <span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3811</span>         <span class="k">raise</span> <span class="n">InvalidIndexError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3812</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3813</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3814</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3815</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3816</span>     <span class="c1">#  the TypeError.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3817</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: &#39;delayed_opt&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="this-is-the-homework-exercise">
@@ -990,6 +1104,173 @@ Name: delayed_opt, Length: 62, dtype: bool
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>onset   durati</th>
+      <th>on</th>
+      <th>choice</th>
+      <th>agent</th>
+      <th>money_left</th>
+      <th>delay_left</th>
+      <th>money_right</th>
+      <th>delay_right</th>
+      <th>participant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>17.009420</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>23.21</td>
+      <td>131</td>
+      <td>10.99</td>
+      <td>51</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>28.013655</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>16.43</td>
+      <td>32</td>
+      <td>9.99</td>
+      <td>19</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>43.017407</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>38.44</td>
+      <td>33</td>
+      <td>32.02</td>
+      <td>12</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>56.021820</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>38.66</td>
+      <td>100</td>
+      <td>26.57</td>
+      <td>24</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>71.024792</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>29.54</td>
+      <td>142</td>
+      <td>27.76</td>
+      <td>6</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>344.112863</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>30.54</td>
+      <td>38</td>
+      <td>37.25</td>
+      <td>132</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>357.117812</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>23.07</td>
+      <td>82</td>
+      <td>29.27</td>
+      <td>140</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>368.121754</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>33.18</td>
+      <td>165</td>
+      <td>27.61</td>
+      <td>104</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>383.125799</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>6.15</td>
+      <td>51</td>
+      <td>14.76</td>
+      <td>177</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>398.128634</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>3.20</td>
+      <td>100</td>
+      <td>17.89</td>
+      <td>153</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<p>120 rows × 9 columns</p>
+</div></div></div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="extra">
