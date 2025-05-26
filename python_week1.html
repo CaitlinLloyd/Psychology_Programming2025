@@ -182,7 +182,6 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Python Session 1</a></li>
 
-
 <li class="toctree-l1"><a class="reference internal" href="python_week2.html">Python Session 2</a></li>
 </ul>
 
@@ -412,9 +411,11 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Session 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-will-practice-cleaning-some-food-choice-task-data">We will practice cleaning some Food choice task data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-the-homework-exercise">This is the homework exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here-calculate-the-average-earnings-per-person-and-the-number-of-times-they-chose-delayed-vs-sooner">Here calculate the average earnings per person and the number of times they chose delayed vs sooner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upload-solution-to-github">Upload solution to Github</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-the-homework-exercise">This is the homework exercise</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extra">Extra</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#these-are-hard-exercises-not-homework-for-extra-practice">These are hard exercises - not homework, for extra practice</a></li>
 </ul>
@@ -551,32 +552,32 @@ To access items in the dataframe, we need to type “df”</p>
       <td>1</td>
       <td>health</td>
       <td>1</td>
-      <td>nuts</td>
-      <td>2.92</td>
-      <td>9.0</td>
+      <td>broccoli</td>
+      <td>0.70</td>
+      <td>2.0</td>
       <td>low</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1</td>
       <td>health</td>
       <td>2</td>
-      <td>apple</td>
-      <td>0.57</td>
-      <td>9.0</td>
+      <td>eggs</td>
+      <td>0.94</td>
+      <td>1.0</td>
       <td>low</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>2</th>
       <td>1</td>
       <td>health</td>
       <td>3</td>
-      <td>pizza</td>
-      <td>0.84</td>
-      <td>9.0</td>
-      <td>low</td>
+      <td>lettuce</td>
+      <td>0.71</td>
+      <td>5.0</td>
+      <td>high</td>
       <td>high</td>
     </tr>
     <tr>
@@ -584,10 +585,10 @@ To access items in the dataframe, we need to type “df”</p>
       <td>1</td>
       <td>health</td>
       <td>4</td>
-      <td>watermelon</td>
-      <td>2.65</td>
-      <td>3.0</td>
-      <td>low</td>
+      <td>soda</td>
+      <td>3.97</td>
+      <td>1.0</td>
+      <td>high</td>
       <td>high</td>
     </tr>
     <tr>
@@ -595,9 +596,9 @@ To access items in the dataframe, we need to type “df”</p>
       <td>1</td>
       <td>health</td>
       <td>5</td>
-      <td>cranberries</td>
-      <td>1.25</td>
-      <td>7.0</td>
+      <td>cucumber</td>
+      <td>2.17</td>
+      <td>2.0</td>
       <td>high</td>
       <td>high</td>
     </tr>
@@ -617,20 +618,20 @@ To access items in the dataframe, we need to type “df”</p>
       <td>20</td>
       <td>choice</td>
       <td>71</td>
-      <td>syrup</td>
-      <td>2.13</td>
-      <td>8.0</td>
-      <td>high</td>
+      <td>popcorn</td>
+      <td>2.10</td>
+      <td>2.0</td>
       <td>low</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>4496</th>
       <td>20</td>
       <td>choice</td>
       <td>72</td>
-      <td>peach</td>
-      <td>1.39</td>
-      <td>1.0</td>
+      <td>donut</td>
+      <td>1.36</td>
+      <td>8.0</td>
       <td>low</td>
       <td>high</td>
     </tr>
@@ -639,21 +640,21 @@ To access items in the dataframe, we need to type “df”</p>
       <td>20</td>
       <td>choice</td>
       <td>73</td>
-      <td>cookie</td>
-      <td>3.16</td>
-      <td>5.0</td>
-      <td>high</td>
+      <td>onion rings</td>
+      <td>0.55</td>
+      <td>3.0</td>
       <td>low</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>4498</th>
       <td>20</td>
       <td>choice</td>
       <td>74</td>
-      <td>cookie</td>
-      <td>1.47</td>
+      <td>turkey</td>
+      <td>2.29</td>
       <td>4.0</td>
-      <td>high</td>
+      <td>low</td>
       <td>low</td>
     </tr>
     <tr>
@@ -661,11 +662,11 @@ To access items in the dataframe, we need to type “df”</p>
       <td>20</td>
       <td>choice</td>
       <td>75</td>
-      <td>pizza</td>
-      <td>3.83</td>
-      <td>3.0</td>
-      <td>low</td>
+      <td>watermelon</td>
+      <td>0.57</td>
+      <td>10.0</td>
       <td>high</td>
+      <td>low</td>
     </tr>
   </tbody>
 </table>
@@ -698,17 +699,17 @@ To access items in the dataframe, we need to type “df”</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0              nuts
-1             apple
-2             pizza
-3        watermelon
-4       cranberries
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0          broccoli
+1              eggs
+2           lettuce
+3              soda
+4          cucumber
            ...     
-4495          syrup
-4496          peach
-4497         cookie
-4498         cookie
-4499          pizza
+4495        popcorn
+4496          donut
+4497    onion rings
+4498         turkey
+4499     watermelon
 Name: food, Length: 4500, dtype: object
 </pre></div>
 </div>
@@ -730,18 +731,18 @@ Name: food, Length: 4500, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25     NaN
-93     NaN
-99     NaN
-203    NaN
-222    NaN
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56     NaN
+116    NaN
+158    NaN
+240    NaN
+300    NaN
         ..
-4367   NaN
-4385   NaN
-4432   NaN
-4443   NaN
-4477   NaN
-Name: reaction_time, Length: 89, dtype: float64
+4282   NaN
+4291   NaN
+4378   NaN
+4455   NaN
+4483   NaN
+Name: reaction_time, Length: 90, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -755,18 +756,18 @@ Name: reaction_time, Length: 89, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10      3.84
-12      3.55
-16      3.86
-23      3.05
-29      3.66
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3       3.97
+9       3.06
+10      3.76
+15      3.61
+17      3.66
         ... 
-4487    3.70
-4489    3.23
-4491    3.12
-4497    3.16
-4499    3.83
-Name: reaction_time, Length: 1225, dtype: float64
+4480    3.95
+4484    3.68
+4485    3.02
+4488    3.18
+4493    3.39
+Name: reaction_time, Length: 1286, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -799,7 +800,7 @@ Name: reaction_time, Length: 1225, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Participant 1&#39;s average health rating: 5.55
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Participant 1&#39;s average health rating: 5.70
 </pre></div>
 </div>
 </div>
@@ -834,18 +835,18 @@ Name: reaction_time, Length: 1225, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   participant   block   fat  average_rating  average_reaction_time  \
-0            1  choice  high        5.485714               2.063143   
-1            1  choice   low        5.605263               2.571316   
-2            1  health  high        5.864865               2.401351   
-3            1  health   low        5.243243               2.184054   
-4            1   taste  high        5.242424               2.291212   
+0            1  choice  high        4.571429               2.350000   
+1            1  choice   low        5.760870               2.208478   
+2            1  health  high        5.828571               2.147429   
+3            1  health   low        5.589744               2.295385   
+4            1   taste  high        5.593750               1.985313   
 
    trial_count  
-0           35  
-1           38  
-2           37  
-3           37  
-4           33  
+0           28  
+1           46  
+2           35  
+3           39  
+4           32  
 </pre></div>
 </div>
 </div>
@@ -874,46 +875,46 @@ Name: reaction_time, Length: 1225, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   participant  average_rating_choice_high  average_rating_choice_low  \
-0            1                    5.485714                   5.605263   
-1            2                    4.882353                   5.195122   
-2            3                    4.540541                   4.756757   
-3            4                    5.250000                   5.837838   
-4            5                    5.156250                   5.250000   
+0            1                    4.571429                   5.760870   
+1            2                    4.750000                   5.729730   
+2            3                    6.166667                   5.432432   
+3            4                    5.864865                   5.631579   
+4            5                    5.689655                   4.888889   
 
    average_rating_health_high  average_rating_health_low  \
-0                    5.864865                   5.243243   
-1                    6.424242                   5.707317   
-2                    5.266667                   5.333333   
-3                    6.281250                   4.857143   
-4                    5.235294                   6.025641   
+0                    5.828571                   5.589744   
+1                    4.758621                   6.000000   
+2                    5.625000                   4.971429   
+3                    5.897436                   5.542857   
+4                    5.634146                   4.852941   
 
    average_rating_taste_high  average_rating_taste_low  \
-0                   5.242424                  5.450000   
-1                   5.171429                  5.486486   
-2                   5.043478                  4.921569   
-3                   4.581395                  5.161290   
-4                   5.260870                  5.372549   
+0                   5.593750                  5.285714   
+1                   5.733333                  6.159091   
+2                   5.911765                  5.600000   
+3                   5.000000                  5.764706   
+4                   4.720930                  5.612903   
 
    average_reaction_time_choice_high  average_reaction_time_choice_low  \
-0                           2.063143                          2.571316   
-1                           1.933824                          2.593902   
-2                           2.325676                          2.325676   
-3                           2.002500                          2.151351   
-4                           2.135312                          2.216000   
+0                           2.350000                          2.208478   
+1                           2.089444                          2.520270   
+2                           2.289444                          2.116757   
+3                           2.336486                          2.186579   
+4                           2.263448                          2.411556   
 
    average_reaction_time_health_high  average_reaction_time_health_low  \
-0                           2.401351                          2.184054   
-1                           2.196364                          2.382195   
-2                           2.161000                          2.255238   
-3                           2.001875                          2.265238   
-4                           2.241471                          2.146923   
+0                           2.147429                          2.295385   
+1                           2.268621                          2.376667   
+2                           2.159750                          2.510571   
+3                           1.989744                          2.008857   
+4                           2.167561                          2.567647   
 
    average_reaction_time_taste_high  average_reaction_time_taste_low  
-0                          2.291212                         2.096000  
-1                          2.476571                         2.171892  
-2                          2.345652                         2.329412  
-3                          2.310698                         2.175161  
-4                          2.154783                         2.431373  
+0                          1.985313                         2.252143  
+1                          2.063000                         2.056136  
+2                          2.225588                         2.201000  
+3                          2.240769                         2.222353  
+4                          2.209302                         2.219032  
 </pre></div>
 </div>
 </div>
@@ -1087,185 +1088,15 @@ Name: delayed_opt, Length: 62, dtype: bool
 </div>
 </div>
 </section>
+<section id="this-is-the-homework-exercise">
+<h2>This is the homework exercise<a class="headerlink" href="#this-is-the-homework-exercise" title="Link to this heading">#</a></h2>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="this-is-the-homework-exercise">
-<h1>This is the homework exercise<a class="headerlink" href="#this-is-the-homework-exercise" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here calculate the average earnings per person and the number of times they chose delayed vs sooner</span>
-
-<span class="c1">## Upload solution to Github</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>onset   durati</th>
-      <th>on</th>
-      <th>choice</th>
-      <th>agent</th>
-      <th>money_left</th>
-      <th>delay_left</th>
-      <th>money_right</th>
-      <th>delay_right</th>
-      <th>participant</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>17.009420</td>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
-      <td>23.21</td>
-      <td>131</td>
-      <td>10.99</td>
-      <td>51</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>28.013655</td>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
-      <td>16.43</td>
-      <td>32</td>
-      <td>9.99</td>
-      <td>19</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>43.017407</td>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
-      <td>38.44</td>
-      <td>33</td>
-      <td>32.02</td>
-      <td>12</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>56.021820</td>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
-      <td>38.66</td>
-      <td>100</td>
-      <td>26.57</td>
-      <td>24</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>71.024792</td>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
-      <td>29.54</td>
-      <td>142</td>
-      <td>27.76</td>
-      <td>6</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>115</th>
-      <td>344.112863</td>
-      <td>5</td>
-      <td>1</td>
-      <td>0</td>
-      <td>30.54</td>
-      <td>38</td>
-      <td>37.25</td>
-      <td>132</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>116</th>
-      <td>357.117812</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>23.07</td>
-      <td>82</td>
-      <td>29.27</td>
-      <td>140</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>117</th>
-      <td>368.121754</td>
-      <td>5</td>
-      <td>1</td>
-      <td>0</td>
-      <td>33.18</td>
-      <td>165</td>
-      <td>27.61</td>
-      <td>104</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>118</th>
-      <td>383.125799</td>
-      <td>5</td>
-      <td>1</td>
-      <td>0</td>
-      <td>6.15</td>
-      <td>51</td>
-      <td>14.76</td>
-      <td>177</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>119</th>
-      <td>398.128634</td>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>3.20</td>
-      <td>100</td>
-      <td>17.89</td>
-      <td>153</td>
-      <td>2</td>
-    </tr>
-  </tbody>
-</table>
-<p>120 rows × 9 columns</p>
-</div></div></div>
-</div>
+<section id="here-calculate-the-average-earnings-per-person-and-the-number-of-times-they-chose-delayed-vs-sooner">
+<h2>Here calculate the average earnings per person and the number of times they chose delayed vs sooner<a class="headerlink" href="#here-calculate-the-average-earnings-per-person-and-the-number-of-times-they-chose-delayed-vs-sooner" title="Link to this heading">#</a></h2>
+</section>
+<section id="upload-solution-to-github">
+<h2>Upload solution to Github<a class="headerlink" href="#upload-solution-to-github" title="Link to this heading">#</a></h2>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="extra">
 <h1>Extra<a class="headerlink" href="#extra" title="Link to this heading">#</a></h1>
@@ -1361,9 +1192,11 @@ Name: delayed_opt, Length: 62, dtype: bool
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Session 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-will-practice-cleaning-some-food-choice-task-data">We will practice cleaning some Food choice task data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-the-homework-exercise">This is the homework exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here-calculate-the-average-earnings-per-person-and-the-number-of-times-they-chose-delayed-vs-sooner">Here calculate the average earnings per person and the number of times they chose delayed vs sooner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upload-solution-to-github">Upload solution to Github</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-the-homework-exercise">This is the homework exercise</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extra">Extra</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#these-are-hard-exercises-not-homework-for-extra-practice">These are hard exercises - not homework, for extra practice</a></li>
 </ul>
