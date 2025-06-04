@@ -1,0 +1,252 @@
+---
+title: "R_week1"
+author: "Instructor"
+date: "2025-06-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+# Load required packages
+library(dplyr)
+library(readr)
+#library(scale)
+
+# Load the nutrient data
+# Load in our choice and demographic data
+
+data=read.csv("https://raw.githubusercontent.com/CaitlinLloyd/Psychology_Programming2025/refs/heads/main/Data/demo.csv")
+choices=read.csv("https://raw.githubusercontent.com/CaitlinLloyd/Psychology_Programming2025/refs/heads/main/Data/FCT_df.csv")
+
+```
+
+```{r pressure, echo=FALSE}
+# Preview
+df_merged <- merge(data,choices,by="ID")
+```
+
+```{r}
+
+# Group by participant ID, block, fat, and sugar; exclude rows with missing data
+summary_df <- df_merged %>%
+  filter(!is.na(rating), !is.na(reaction_time)) %>%
+  group_by(ID, block, fat, sugar) %>%
+  summarise(
+    average_rating = mean(rating, na.rm = TRUE),
+    average_reaction_time = mean(reaction_time, na.rm = TRUE),
+    trial_count = n(),  # count of non-missing trials
+    .groups = 'drop'
+  )
+
+# View the result
+head(summary_df)
+
+```
+
+
+```{r}
+# Step 3: Pivot wider on combinations of fat/sugar/kcal levels
+df_wide <- summary_df %>%
+  pivot_wider(
+    names_from = c(fat,sugar),
+    values_from = c(average_rating, average_reaction_time, trial_count)
+  )
+
+# Try again but labeling the food types so you can more clearly see what the column names align with
+
+```
+
+
+```{r}
+# now select some columns from the demographic frame and merge with our wide_df
+demo_sub=data[,c('ID','Patient','BMI','EDE.Score','Age')]
+
+demo_sub=merge(demo_sub,df_wide,by='ID')
+```
+
+
+```{r}
+## now let's group by patient group and calculate means of food ratings, BMI, age, EDEQ
+
+demo_sub %>% group_by(Patient) %>% summarize_at(c("BMI","Age"),mean)
+
+
+```
+```{r}
+#Now lets merge the rating file with the info file
+simulated_data_complete <- merge(simulated_data_complete,foods,by.x="stimulus",by.y="stimulus")
+
+```
+```{r}
+#now lets group by fat content and summarize for each participant
+summary <- simulated_data_complete %>% dplyr::group_by(participant,HI_LO_fat) %>% summarize_at(c('choice',"reaction_time"),c(mean))
+
+#replace the 0 1 values with high and low fat
+summary$HI_LO_fat <- ifelse(summary$HI_LO_fat==0,"low","high")
+
+# what are other ways we can do this?
+```
+
+```{r}
+
+library(purrr)
+library(broom)
+
+# List of variables to test
+vars_to_test <- c("BMI")
+
+# Split groups
+patients <- demo_sub %>% filter(Patient == "Yes")
+controls <- demo_sub %>% filter(Patient == "No")
+
+# Function to run Welch t-test on a variable
+run_t_test <- function(var) {
+  test_result <- t.test(patients[[var]], controls[[var]], var.equal = FALSE)
+  tibble(
+    variable = var,
+    mean_patient = mean(patients[[var]], na.rm = TRUE),
+    mean_control = mean(controls[[var]], na.rm = TRUE),
+    t_stat = test_result$statistic,
+    p_value = test_result$p.value
+  )
+}
+
+# Apply to each variable
+ttest_results <- map_dfr(vars_to_test, run_t_test)
+
+# View results
+print(ttest_results)
+
+```
+```{r}
+# Now lets plot the variables
+library(ggplot2)
+
+ggplot(demo_sub, aes(x = BMI, y = trial_count_high_high)) +
+  geom_point(size = 3, alpha = 0.8) +
+  geom_smooth(method = "lm", se = TRUE, color = "steelblue", size = 1) +
+  labs(
+    title = "BMI vs. Average High-Fat Food Rating",
+    x = "Body Mass Index (BMI)",
+    y = "High-Fat Food Rating (1–10)"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5)
+  ) +
+
+  geom_hline(yintercept = mean(demo_sub$trial_count_high_high, na.rm = TRUE),
+             linetype = "dashed", color = "gray")
+
+```
+
+
+```{r}
+#Now load in a dataset we created
+# Now lets plot the variables
+library(ggplot2)
+
+ggplot(demo_sub, aes(x = BMI, y = trial_count_high_high,color=Patient)) +
+  geom_point(size = 3, alpha = 0.8) +
+  geom_smooth(method = "lm", se = TRUE, size = 1) +
+  labs(
+    title = "BMI vs. Average High-Fat Food Rating",
+    x = "Body Mass Index (BMI)",
+    y = "High-Fat Food Rating (1–10)"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5)
+  ) +
+
+  geom_hline(yintercept = mean(demo_sub$trial_count_high_high, na.rm = TRUE),
+             linetype = "dashed", color = "gray")
+
+```
+
+
+```{r}
+# Here change the plot labels
+```
+
+
+```{r}
+# Look at a different outcome
+```
+
+```{r}
+# Advanced
+# Try and plot, in the patient group only BMI against choice preference for high vs low fat
+```
+
+
+```{r}
+# Let's also look at age
+```
+
+
+```{r}
+# Now we will compare patient and HC using regression
+
+# Variables to test
+variables <- c("BMI")
+
+# Run regression for each variable
+results <- map_dfr(variables, function(var) {
+  # Build formula: outcome ~ Patient + Age
+  formula <- as.formula(paste(var, "~ Patient + Age"))
+  
+  # Fit linear model
+  model <- lm(formula, data = demo_sub)
+  
+  # Tidy model results
+  tidy_model <- tidy(model, conf.int = TRUE)
+  
+  # Extract Patient effect (assumes Patient is a factor and "No" is reference)
+  patient_row <- tidy_model %>% filter(term == "PatientYes")
+  
+  tibble(
+    variable = var,
+    coef_patient_vs_control = patient_row$estimate,
+    p_value = patient_row$p.value,
+    conf_lower = patient_row$conf.low,
+    conf_upper = patient_row$conf.high
+  )
+})
+
+# View results
+print(results)
+
+```
+```{r}
+#Amend the formula above to ask about interactions between patient group and fat content influence on choice rating
+```
+
+
+```{r}
+# Now try to group the demo df by patient status and correlate fat intake at meal and age
+
+data %>%
+  group_by(Patient) %>%
+  summarise(corr = cor(Fat..g., Age, use = "complete.obs"))
+
+```
+
+```{r}
+#Homework
+## Load in the delay discounting data
+## Calculate the average number of delayed choices in patient and HC groups
+## Calculate the correlation between age, delayed choices and impulsivity scale per group
+## Plot delayed choices and impulsivity by patient group
+
+```
+

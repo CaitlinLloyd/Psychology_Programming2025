@@ -182,6 +182,8 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Python Session 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_week2.html">Python Session 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week1_R.html">R Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week2_R.html">R Markdown</a></li>
 </ul>
 
     </div>
@@ -542,42 +544,42 @@ To access items in the dataframe, we need to type “df”</p>
       <td>1</td>
       <td>health</td>
       <td>1</td>
-      <td>ice cream</td>
-      <td>3.60</td>
-      <td>2.0</td>
+      <td>shrimp</td>
+      <td>3.89</td>
+      <td>1.0</td>
       <td>low</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1</td>
       <td>health</td>
       <td>2</td>
-      <td>candy</td>
-      <td>0.58</td>
-      <td>6.0</td>
-      <td>high</td>
+      <td>pear</td>
+      <td>3.84</td>
+      <td>2.0</td>
       <td>low</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>2</th>
       <td>1</td>
       <td>health</td>
       <td>3</td>
-      <td>apple</td>
-      <td>2.18</td>
-      <td>10.0</td>
-      <td>high</td>
-      <td>high</td>
+      <td>popcorn</td>
+      <td>3.80</td>
+      <td>3.0</td>
+      <td>low</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>3</th>
       <td>1</td>
       <td>health</td>
       <td>4</td>
-      <td>cake</td>
-      <td>3.37</td>
-      <td>8.0</td>
+      <td>cookie</td>
+      <td>1.56</td>
+      <td>4.0</td>
       <td>low</td>
       <td>high</td>
     </tr>
@@ -586,10 +588,10 @@ To access items in the dataframe, we need to type “df”</p>
       <td>1</td>
       <td>health</td>
       <td>5</td>
-      <td>spinach</td>
-      <td>2.46</td>
-      <td>9.0</td>
-      <td>high</td>
+      <td>mango</td>
+      <td>1.37</td>
+      <td>3.0</td>
+      <td>low</td>
       <td>high</td>
     </tr>
     <tr>
@@ -608,11 +610,11 @@ To access items in the dataframe, we need to type “df”</p>
       <td>20</td>
       <td>choice</td>
       <td>71</td>
-      <td>shrimp</td>
-      <td>2.98</td>
-      <td>2.0</td>
+      <td>peanut butter</td>
+      <td>3.56</td>
+      <td>3.0</td>
       <td>high</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>4496</th>
@@ -620,31 +622,31 @@ To access items in the dataframe, we need to type “df”</p>
       <td>choice</td>
       <td>72</td>
       <td>apple</td>
-      <td>2.61</td>
-      <td>8.0</td>
-      <td>high</td>
-      <td>high</td>
+      <td>3.96</td>
+      <td>10.0</td>
+      <td>low</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>4497</th>
       <td>20</td>
       <td>choice</td>
       <td>73</td>
-      <td>carrot</td>
-      <td>2.21</td>
-      <td>10.0</td>
+      <td>apple</td>
+      <td>2.04</td>
+      <td>8.0</td>
       <td>low</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>4498</th>
       <td>20</td>
       <td>choice</td>
       <td>74</td>
-      <td>popcorn</td>
-      <td>2.60</td>
-      <td>5.0</td>
-      <td>high</td>
+      <td>banana</td>
+      <td>3.37</td>
+      <td>4.0</td>
+      <td>low</td>
       <td>low</td>
     </tr>
     <tr>
@@ -652,11 +654,11 @@ To access items in the dataframe, we need to type “df”</p>
       <td>20</td>
       <td>choice</td>
       <td>75</td>
-      <td>pasta</td>
-      <td>0.70</td>
-      <td>7.0</td>
-      <td>low</td>
-      <td>low</td>
+      <td>yogurt</td>
+      <td>2.38</td>
+      <td>4.0</td>
+      <td>high</td>
+      <td>high</td>
     </tr>
   </tbody>
 </table>
@@ -689,17 +691,17 @@ To access items in the dataframe, we need to type “df”</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       ice cream
-1           candy
-2           apple
-3            cake
-4         spinach
-          ...    
-4495       shrimp
-4496        apple
-4497       carrot
-4498      popcorn
-4499        pasta
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0              shrimp
+1                pear
+2             popcorn
+3              cookie
+4               mango
+            ...      
+4495    peanut butter
+4496            apple
+4497            apple
+4498           banana
+4499           yogurt
 Name: food, Length: 4500, dtype: object
 </pre></div>
 </div>
@@ -721,18 +723,18 @@ Name: food, Length: 4500, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>125    NaN
-233    NaN
-247    NaN
-300    NaN
-342    NaN
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42     NaN
+208    NaN
+217    NaN
+329    NaN
+363    NaN
         ..
-4241   NaN
-4244   NaN
-4278   NaN
-4325   NaN
-4403   NaN
-Name: reaction_time, Length: 99, dtype: float64
+4382   NaN
+4431   NaN
+4450   NaN
+4478   NaN
+4487   NaN
+Name: reaction_time, Length: 100, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -746,18 +748,18 @@ Name: reaction_time, Length: 99, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       3.60
-3       3.37
-10      3.61
-17      3.32
-22      3.50
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       3.89
+1       3.84
+2       3.80
+6       3.44
+9       3.44
         ... 
-4485    3.73
-4486    3.08
-4488    3.48
-4491    3.14
-4493    3.46
-Name: reaction_time, Length: 1238, dtype: float64
+4479    3.68
+4484    3.61
+4495    3.56
+4496    3.96
+4498    3.37
+Name: reaction_time, Length: 1247, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -790,7 +792,7 @@ Name: reaction_time, Length: 1238, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Participant 1&#39;s average health rating: 5.60
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Participant 1&#39;s average health rating: 4.74
 </pre></div>
 </div>
 </div>
@@ -825,18 +827,18 @@ Name: reaction_time, Length: 1238, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   participant   block   fat  average_rating  average_reaction_time  \
-0            1  choice  high        5.050000               2.418500   
-1            1  choice   low        5.545455               2.283636   
-2            1  health  high        6.269231               2.175385   
-3            1  health   low        5.244898               2.070204   
-4            1   taste  high        5.346154               2.131538   
+0            1  choice  high        5.774194               2.199032   
+1            1  choice   low        4.928571               2.181429   
+2            1  health  high        4.037037               2.520741   
+3            1  health   low        5.148936               2.258723   
+4            1   taste  high        5.541667               2.051667   
 
    trial_count  
-0           20  
-1           55  
-2           26  
-3           49  
-4           26  
+0           31  
+1           42  
+2           27  
+3           47  
+4           24  
 </pre></div>
 </div>
 </div>
@@ -865,46 +867,46 @@ Name: reaction_time, Length: 1238, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   participant  average_rating_choice_high  average_rating_choice_low  \
-0            1                    5.050000                   5.545455   
-1            2                    6.516129                   5.886364   
-2            3                    6.000000                   6.703704   
-3            4                    5.285714                   5.355556   
-4            5                    6.666667                   4.711111   
+0            1                    5.774194                   4.928571   
+1            2                    5.545455                   5.435897   
+2            3                    5.030303                   5.769231   
+3            4                    5.214286                   6.239130   
+4            5                    4.970588                   4.609756   
 
    average_rating_health_high  average_rating_health_low  \
-0                    6.269231                   5.244898   
-1                    6.368421                   5.057143   
-2                    5.500000                   6.071429   
-3                    5.227273                   5.823529   
-4                    4.608696                   5.745098   
+0                    4.037037                   5.148936   
+1                    5.741935                   5.250000   
+2                    6.272727                   5.128205   
+3                    5.411765                   5.128205   
+4                    4.363636                   5.820513   
 
    average_rating_taste_high  average_rating_taste_low  \
-0                   5.346154                  5.395833   
-1                   6.433333                  5.604651   
-2                   4.916667                  5.428571   
-3                   5.965517                  5.155556   
-4                   5.466667                  5.714286   
+0                   5.541667                  6.254902   
+1                   5.875000                  5.424242   
+2                   6.406250                  5.560976   
+3                   5.294118                  5.560976   
+4                   4.777778                  5.973684   
 
    average_reaction_time_choice_high  average_reaction_time_choice_low  \
-0                           2.418500                          2.283636   
-1                           2.135806                          2.502727   
-2                           2.100500                          2.306481   
-3                           2.221786                          2.298667   
-4                           2.411481                          2.084889   
+0                           2.199032                          2.181429   
+1                           2.791515                          2.244359   
+2                           2.474242                          2.573846   
+3                           2.491786                          2.315870   
+4                           2.288235                          2.331463   
 
    average_reaction_time_health_high  average_reaction_time_health_low  \
-0                           2.175385                          2.070204   
-1                           2.432632                          2.011429   
-2                           2.155937                          2.116905   
-3                           2.419091                          2.224706   
-4                           2.121739                          2.071765   
+0                           2.520741                          2.258723   
+1                           2.054839                          2.613182   
+2                           2.063333                          2.200769   
+3                           2.390000                          2.193846   
+4                           2.553030                          2.298462   
 
    average_reaction_time_taste_high  average_reaction_time_taste_low  
-0                          2.131538                         2.193125  
-1                          2.186667                         2.462326  
-2                          2.269167                         2.384082  
-3                          2.078621                         2.261778  
-4                          2.307333                         2.142143  
+0                          2.051667                         2.451373  
+1                          1.952500                         2.387576  
+2                          2.199375                         2.219756  
+3                          2.109706                         2.295122  
+4                          2.303889                         2.186842  
 </pre></div>
 </div>
 </div>
