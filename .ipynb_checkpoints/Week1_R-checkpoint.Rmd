@@ -1,0 +1,169 @@
+---
+title: "R_week1"
+author: "Instructor"
+date: "2025-06-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+# Load required packages
+library(dplyr)
+library(readr)
+#library(scale)
+
+# Load the nutrient data
+foods <- read.csv("https://raw.githubusercontent.com/CaitlinLloyd/Psychology_Programming2025/refs/heads/main/Data/nutrient_info.csv")
+
+# Standardize relevant nutrients
+nutrients_scaled <- scale(foods %>% dplyr::select(Fat_g, CHO_g, PRO_g, Energy_Density))
+foods <- bind_cols(foods, as.data.frame(nutrients_scaled))
+colnames(foods)[(ncol(foods)-3):ncol(foods)] <- c("Fat_s", "CHO_s", "PRO_s", "ED_s")
+
+# Set up parameters
+n_participants <- 20
+
+# Function to simulate ratings for one participant
+simulate_participant <- function(pid, foods_df) {
+  n_foods <- nrow(foods_df)
+  
+  health_rating <- round(3 + (-0.6 * foods_df$Fat_s + 0.4 * foods_df$PRO_s + 
+                              0.3 * foods_df$CHO_s + rnorm(n_foods, 0, 0.5)))
+  health_rating <- pmin(pmax(health_rating, 1), 5)
+  
+  taste_rating <- round(3 + (0.6 * foods_df$Fat_s + 0.4 * foods_df$ED_s +
+                             rnorm(n_foods, 0, 0.5)))
+  taste_rating <- pmin(pmax(taste_rating, 1), 5)
+  
+  choice <- round(3 + 0.5 * (taste_rating - 3) + 0.3 * (health_rating - 3) +
+                    rnorm(n_foods, 0, 0.7))
+  choice <- pmin(pmax(choice, 1), 5)
+  
+  # Reaction time: faster (closer to 1s) for more extreme choices
+  preference_strength <- abs(choice - 3)
+  reaction_time <- round(runif(n_foods, 3, 5) - 0.5 * preference_strength + rnorm(n_foods, 0, 0.2), 2)
+  reaction_time <- pmax(pmin(reaction_time, 5), 1)
+
+  df <- data.frame(
+    participant = pid,
+    stimulus = foods_df$stimulus,
+    Fat_g = foods_df$Fat_g,
+    CHO_g = foods_df$CHO_g,
+    PRO_g = foods_df$PRO_g,
+    Energy_Density = foods_df$Energy_Density,
+    health_rating = health_rating,
+    taste_rating = taste_rating,
+    choice = choice,
+    reaction_time = reaction_time
+  )
+  
+  # Introduce missing values
+  n_missing <- round(0.05 * n_foods)
+  miss_idx <- sample(1:n_foods, n_missing)
+  df$choice[miss_idx] <- NA
+  df$reaction_time[miss_idx] <- NA
+  
+  return(df)
+}
+
+simulated_data <- bind_rows(lapply(1:n_participants, simulate_participant, foods_df = foods))
+
+
+```
+
+```{r pressure, echo=FALSE}
+# Preview
+head(simulated_data)
+```
+
+```{r}
+#Now access the food column (hint, use $)
+
+#And the RT
+```
+
+
+```{r}
+#Remove missing values
+simulated_data_complete <- simulated_data[complete.cases(simulated_data),]
+```
+
+
+```{r}
+simulated_data_complete <- subset(simulated_data,!is.na(simulated_data$choice))
+```
+
+
+```{r}
+#Summarize health for one person
+# Filter for one participant (e.g., participant 1)
+participant_1_data <- simulated_data %>% filter(participant == 1)
+
+# Summary statistics for health rating
+mean(participant_1_data$health_rating)
+
+#print this value
+
+print(paste0("the average health rating for participant one is: ",mean(participant_1_data$health_rating)))
+```
+```{r}
+#Now lets merge the rating file with the info file
+simulated_data_complete <- merge(simulated_data_complete,foods,by.x="stimulus",by.y="stimulus")
+
+```
+```{r}
+#now lets group by fat content and summarize for each participant
+summary <- simulated_data_complete %>% dplyr::group_by(participant,HI_LO_fat) %>% summarize_at(c('choice',"reaction_time"),c(mean))
+
+#replace the 0 1 values with high and low fat
+summary$HI_LO_fat <- ifelse(summary$HI_LO_fat==0,"low","high")
+
+# what are other ways we can do this?
+```
+
+```{r}
+#pivot summary frame to wide
+#now lets group by fat content and summarize for each participant
+wide <- summary  %>% pivot_wider(1,names_from = "HI_LO_fat",values_from = c("choice","reaction_time"))
+
+# let's compare the average choice ratings for each participant for high and low-fat foods
+
+t.test(wide$choice_low,wide$choice_high)
+
+```
+```{r}
+# Here try and simulate a different dataset - a monetary choice task where the participant
+# selects between an immediate vs delayed reward. Compare the RT between when the participant chooses the immediate vs delayed option
+```
+
+
+```{r}
+#Now load in a dataset we created
+dd <- read.csv("https://raw.githubusercontent.com/CaitlinLloyd/Psychology_Programming2025/refs/heads/main/Data/DelayDisc_example.csv")
+```
+
+
+```{r}
+#Use if statements to figure out which is delayed option
+```
+
+
+```{r}
+# Now summarize the RT for each person when they chose delayed vs chose sooner reward
+```
+
+```{r}
+## Here calculate the average earnings per person (average value of choices across participants) and the number of times they chose delayed vs sooner (you will need group_by and count functions)
+
+## Upload solution to Github
+```
+

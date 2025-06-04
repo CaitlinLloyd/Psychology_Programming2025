@@ -6,3 +6,5 @@ root: introduction
 chapters:
 - file: python_week1
 - file: python_week2
+- file: Week1_R
+- file: Week2_R
