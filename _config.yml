@@ -37,3 +37,10 @@ repository:
 
 launch_buttons:
   colab_url: "https://colab.research.google.com"
+
+sphinx:
+  config:
+    nb_custom_formats:
+        .Rmd:
+            - jupytext.reads
+            - fmt: Rmd
