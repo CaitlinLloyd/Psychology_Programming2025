@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Week 2
+# R Week 2
 
 We are working in R this week. We will execute this code locally or in google colab, using an R kernel.
 
