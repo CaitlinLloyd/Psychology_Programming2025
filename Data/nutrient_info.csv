@@ -1,0 +1,139 @@
+Food_image,HI_LO_fat,food,Total kcal,CHO_g,PRO_g,Fat_g,CHO_pctKcal,PRO_pctKcal,Fat_pctKcal,Energy_Density,...13,stimulus
+1%milk.jpg,0,1% milk,42,4.99,3.37,0.97,45.979,34.262,20.301,0.42,NA,1%milk
+air popcorn.jpg,0,Air-popped popcorn,387,77,12.94,4.54,81.121,9.128,9.819,3.87,NA,air popcorn
+american cheese.jpg,1,American cheese,375,1.6,22.15,31.25,1.651,25.221,73.25,3.75,NA,american cheese
+apple slices.jpg,0,Apple,52,13.81,0.26,0.17,95.608,1.68,2.736,0.52,NA,apple slices
+avacado.jpg,1,Avocado: green,120,7.82,2.23,10.06,23.46,6.244,70.169,1.2,NA,avacado
+baby cheese.jpg,1,Baby Bell cheese w/crackers,374.1,19.642,19.642,24.107,21,21,58,3.74,NA,baby cheese
+bagel and cc.jpg,1,Bagel & cream cheese,282.15,36.898,8.822,11.175,52.303,12.684,34.932,2.82,NA,bagel and cc
+bagel plain.jpg,0,Bagel: plain,257,50.5,10.02,1.62,78.599,15.595,5.673,2.57,NA,bagel plain
+baguette oil.jpg,1,Baguette with olive oil,420.49,43.949,9.149,23.529,41.789,8.7,49.554,4.2,NA,baguette oil
+baked potato.jpg,0,Baked Potato,93,21.15,2.5,0.13,91.65,7.473,1.17,0.93,NA,baked potato
+banana.jpg,0,Banana,89,22.84,1.09,0.33,92.387,4.115,3.103,0.89,NA,banana
+blackbeanswithrice.jpg,0,Black Beans w/ rice,129,25.485,5.68,0.39,81.706,15.7,2.6,1.29,NA,blackbeanswithrice
+blueberries.jpg,0,Blueberries,57,14.49,0.74,0.33,91.516,4.362,4.846,0.57,NA,blueberries
+broccoli cauliflower.jpg,0,Broccoli & Cauliflower: raw,30,5.97,2.4,0.235,72.247,19.851,6.668,0.3,NA,broccoli cauliflower
+broccoli.jpg,0,Broccoli – raw,34,6.64,2.82,0.37,69.72,20.238,9.109,0.34,NA,broccoli
+brownie.jpg,1,Brownie,597,75.619,6.367,33.588,46.996,3.45,48.971,5.97,NA,brownie
+burger.jpg,1,"Burger on bun: homemade, 80 % lean,",178.14,12.696,13.236,7.897,28.882,31.063,39.901,1.78,NA,burger
+burrito.jpg,0,Burrito - Amy’s Bean & Cheese,181.76,27.05,6.47,5.294,59.6,14.2,26.2,1.81,NA,burrito
+cantaloupe.jpg,0,Cantaloupe,34,8.16,0.84,0.19,86.4,8.301,4.677,0.34,NA,cantaloupe
+carrotsticks.jpg,0,Carrot Sticks,41,9.58,0.93,0.24,89.725,6.306,4.9,0.41,NA,carrotsticks
+celery and carrot sticks.jpg,0,Celery & Carrot Sticks,29,6.275,0.81,0.205,85.381,9.378,6.208,0.29,NA,celery and carrot sticks
+celerysticks.jpg,0,Celery sticks,16,2.97,0.69,0.17,74.25,17.25,9.563,0.16,NA,celerysticks
+cheerios.jpg,0,Cheerios (dry),367,74.68,11.33,5.9,75.901,10.682,13.456,3.67,NA,cheerios
+Cheese nachos.jpg,1,Cheese Nachos,370,31.854,9.412,22.481,36.144,10.356,53.528,3.7,NA,Cheese nachos
+cheesecubes.jpg,1,Cheese cubes (mild cheddar),403,1.28,24.9,33.14,1.229,26.383,72.283,4.03,NA,cheesecubes
+cheezeits.jpg,1,Cheeze-It,509,60.738,8.877,25.396,49.114,7.043,43.912,5.09,NA,cheezeits
+cherries.jpg,0,Cherries,63,16.01,1.06,0.2,91.486,5.653,2.657,0.63,NA,cherries
+cherry tomato.jpg,0,Cherry tomatoes,18,3.92,0.88,0.2,77.747,11.929,9.3,0.18,NA,cherry tomato
+chicken nuggets2.jpg,1,Chicken nuggets w BBQ Sauce,269.387,18.136,12.564,16.193,27.052,19.724,53.305,2.69,NA,chicken nuggets2
+chickenfingers.jpg,1,Chicken fingers - Perdue Crispy Chicken Strips,201.164,15.294,16.4696,8.2348,30.4,32.7,36.9,2.01,NA,chickenfingers
+chickennoodlesoup.jpg,0,Chicken noodle soup - Campbell’s Classic,43.6731,5.30608,2.85712,1.22448,48.6,26.2,25.2,0.43,NA,chickennoodlesoup
+chocolatecoveredpretzels.jpg,1,Chocolate (dark) covered pretzels - Flipz,525,67.8571,7.14285,25,51.7,5.4,42.9,5.25,NA,chocolatecoveredpretzels
+cocktailshrimp.jpg,0,Cocktail shrimp,99,0,20.91,1.08,0,90.188,9.84,0.99,NA,cocktailshrimp
+cookies.jpg,1,Choc Chip cookies - Entenmann’s,489.96,66.666,3.33,23.33,54.4,2.7,42.9,4.89,NA,cookies
+corn cob.jpg,0,Corn on Cob,108,25.11,3.32,1.28,83.002,7.501,9.92,1.08,NA,corn cob
+craisins.jpg,0,Craisins - Ocean Spray,308,82.36,0.07,1.37,96.265,0.076,3.723,3.08,NA,craisins
+croissant.jpg,1,Croissant - plain,455,46.841,8.041,26.262,42.092,7.178,50.74,4.55,NA,croissant
+cucumber slices.jpg,0,Cucumber slices,15,3.63,0.65,0.11,86.394,10.573,6.138,0.15,NA,cucumber slices
+cupcakes am.jpg,1,Cupcakes: mini frosted,350.699,56.338,2.817,12.676,64.3,3.2,32.5,3.5,NA,cupcakes am
+doritos.jpg,1,Doritos – Nacho Cheese,497,54.64,5.4,28.46,44,4.4,51.6,4.97,NA,doritos
+doughnuts.jpg,1,Doughnuts: frosted/ yeast-type,405,48.996,5.673,21.046,48.37,5.565,45.899,4.05,NA,doughnuts
+edamame.jpg,1,Edamame,141,11.05,12.35,6.4,31.896,30.393,37.991,1.41,NA,edamame
+eggs.jpg,1,Eggs: hard boiled,155,1.12,12.58,10.61,2.659,35.386,61.743,1.55,NA,eggs
+eggsalad.jpg,1,Egg salad,248,2.401,7.651,23.064,3.641,13.403,82.892,2.48,NA,eggsalad
+falafelwithpita.jpg,1,Falafel w/pita,356.04,32.049,10.7835,22.0813,36.682,10.999,52.325,3.56,NA,falafelwithpita
+french fries.jpg,1,French Fries,310,37.51,3.206,17.049,48.72,2.872,48.547,3.1,NA,french fries
+fried eggs.jpg,1,Eggs: fried,219,1.217,13.674,17.289,2.042,27.178,70.618,2.19,NA,fried eggs
+froot loops w milk.jpg,0,Fruit Loops (3/4 c) w whole milk (4 FO),112.11,17.441,3.247,3.382,61.884,11.36,26.856,1.12,NA,froot loops w milk
+fruitsalad.jpg,0,Fruit salad,48.2168,10.9213,0.52,0.2716,90.601,4.3138,5.0696,0.48,NA,fruitsalad
+grahamcrackers.jpg,0,Graham crackers - Nabisco Original,437.096,77.4193,6.451612,11.29032,70.9,5.9,23.2,4.37,NA,grahamcrackers
+granola w milk.jpg,1,Granola (1/2 c) w/ whole milk (2 FO),244.26,29.153,6.672,12.133,47.126,9.827,42.612,2.44,NA,granola w milk
+granolabar.jpg,1,Granola bar- Nature Valley Crunchy,454.751,69.046,7.1427,16.6663,61,6,33,4.55,NA,granolabar
+grapefruit.jpg,0,Grapefruit,33,8.41,0.69,0.1,91.745,7.025,2.536,0.33,NA,grapefruit
+Grapes.jpg,0,Grapes,69,18.1,0.72,0.16,94.435,3.506,1.941,0.69,NA,Grapes
+green beans.jpg,0,Green beans: raw,31,7.13,1.82,0.12,82.11,14.325,3.24,0.31,NA,green beans
+grilled cheese.jpg,1,Grilled cheese,336,29.678,11.621,18.901,36.203,14.296,49.537,3.36,NA,grilled cheese
+grilled chicken strips.jpg,0,Grilled chicken strips,173,0,30.91,4.51,0,76.292,23.515,1.73,NA,grilled chicken strips
+hashbrowns.jpg,1,Hash browns,221,28.1,2.401,11.5,51.197,3.018,45.932,2.21,NA,hashbrowns
+Hershey Kisses.jpg,1,Hershey’s Kisses,535,59.4,7.65,29.66,44.411,5.72,49.895,5.35,NA,Hershey Kisses
+hotdog w must.jpg,1,Hot dog on bun w/mustard,265.538,22.899,8.852,15.212,34.922,13.637,51.394,2.65,NA,hotdog w must
+ice cream sundae 002.jpg,1,"Ice cream sundae (ice cream, whip cream, cherry)",223.174,24.696,3.146,12.9,43.029,5.484,51.574,2.23,NA,ice cream sundae 002
+icecream.jpg,1,Breyer’s Vanilla Ice cream,192.424,21.212,3.03,10.606,44.09,6.299,49.606,1.92,NA,icecream
+kettlecorn.jpg,0,Kettle Corn - Cracker Jacks,421.4,82.1428,7.142856,7.142856,77.9,6.8,15.3,4.21,NA,kettlecorn
+kitkat.jpg,1,Kit Kat,519.046,64.2857,6.4285,26.1904,49.6,5,45.4,5.19,NA,kitkat
+kiwi.jpg,0,Kiwi,61,14.66,1.14,0.52,86.518,6.279,7.135,0.61,NA,kiwi
+lettucesalad.jpg,0,Lettuce salad,23.5293,4.70588,1.17647,0,80,20,0,0.23,NA,lettucesalad
+lollipops.jpg,0,Lollipops,394,98,0,0.2,99.492,0,0.457,3.94,NA,lollipops
+lox.jpg,1,Lox,117,0,18.28,4.32,0,66.714,33.305,1.17,NA,lox
+luckycharms.jpg,0,Lucky Charms (1C) w/ 1% milk (1/2C),108.05,19.1,4.03,1.452,73.659,14.965,11.547,1.08,NA,luckycharms
+m_and_m.jpg,1,M&M candies,492,71.19,4.33,21.13,57.878,3.52,38.652,4.92,NA,m_and_m
+mac & cheese.jpg,1,Mac and cheese: Stouffers,156,15.284,6.59,7.484,40.194,17.495,42.226,1.56,NA,mac & cheese
+mango.jpg,0,Mango,65,17,0.51,0.27,94.154,2.636,3.477,0.65,NA,mango
+mashed potato.jpg,1,Mashed potatoes w/butter,115,17.763,1.811,4.36,62.151,4.728,33.303,1.15,NA,mashed potato
+melbatoastcrackers.jpg,0,Melba Toast (rye) - Old London,352.941,76.4705,11.7647,0,86.7,13.3,0,3.52,NA,melbatoastcrackers
+mini muffins.jpg,1,Mini muffins,400,44,4,24,43.1,4,52.9,4,NA,mini muffins
+mozarella sticks.jpg,1,Mozzarella sticks w/marinara sauce,286.796,25.51,10.265,16.155,35.714,14.678,49.609,2.86,NA,mozarella sticks
+mushrooms.jpg,0,Mushrooms: raw,22,3.28,3.09,0.34,51.884,36.799,12.935,0.22,NA,mushrooms
+olives.jpg,1,Olives (green w/pimento),145,3.84,1.03,15.32,9.534,2.387,88.433,1.45,NA,olives
+omelette.jpg,1,Omelet – plain,210,1.069,11.05,17.686,1.878,22.896,75.099,2.1,NA,omelette
+orange slices.jpg,0,Orange: sliced,47,11.75,0.94,0.12,91.25,6.72,2.137,0.47,NA,orange slices
+oreos.jpg,1,Oreos,491.176,73.5294,2.9411,20.5882,59.88,2.395,37.724,4.91,NA,oreos
+PB.jpg,1,Peanut butter,588,19.56,25.09,50.39,13.539,14.807,71.729,5.88,NA,PB
+peaches.jpg,0,Peach,39,9.54,0.91,0.25,88.062,7.84,5.365,0.39,NA,peaches
+peanutbutterritz.jpg,1,Peanut Butter Ritz Bits Crackers,506.616,56.66,9.99,26.66,44.7,7.9,47.4,5.06,NA,peanutbutterritz
+peanutbutterwithbanana.jpg,1,Peanut butter (1.5 oz wt) w/banana (small),236.9,21.868,6.2,15.161,34.389,11.979,53.582,2.36,NA,peanutbutterwithbanana
+pear.jpg,0,Pear,58,15.46,0.38,0.12,95.959,2.201,1.732,0.58,NA,pear
+pickles.jpg,0,Pickles: dill,12,2.59,0.6,0.14,77.052,12.2,9.765,0.12,NA,pickles
+pizza.jpg,1,Pizza (restaurant),281,29.819,14.597,11.349,43.079,21.481,35.463,2.81,NA,pizza
+popsicles.jpg,0,Popsicles,79,19.23,0,0.24,97.367,0,2.734,0.79,NA,popsicles
+poptarts.jpg,0,Pop Tart strawberry frosted,394.23,73.0769,3.8461,9.6153,74.1,3.9,22,3.94,NA,poptarts
+potatochips.jpg,1,Potato chips - Lays,546,54.521,5.241,35.244,40.264,2.67,57.064,5.46,NA,potatochips
+Pretzels.jpg,0,Pretzels,378,79.2,10.34,2.63,83.81,10.121,6.053,3.78,NA,Pretzels
+raisin bran w milk.jpg,0,Raisin Bran (3/4 c) + whole milk (4 FO),129.924,23.907,4.649,2.967,66.411,13.383,20.306,1.29,NA,raisin bran w milk
+raisins.jpg,0,Raisins,299,79.18,3.07,0.46,95.334,3.45,1.288,2.99,NA,raisins
+raspberries.jpg,0,Raspberries,52,11.94,1.2,0.65,82.662,7.754,10.463,0.52,NA,raspberries
+redbellpepper.jpg,0,Red bell pepper,31,6.03,0.99,0.3,77.806,12.774,8.71,0.31,NA,redbellpepper
+reeses.jpg,1,Reese’s Peanut butter cups,515,55.36,10.24,30.53,38.698,7.953,53.353,5.15,NA,reeses
+reesespieces.jpg,1,Reeses Pieces,495.223,62.85,10.055,22.624,50.8,8.1,41.1,4.95,NA,reesespieces
+rice cakes.jpg,0,Rice Cakes,387,81.5,8.2,2.8,86.765,7.225,6.056,3.87,NA,rice cakes
+rigatoni and sauce.jpg,0,Rigatoni w/tomato  sauce,131.32,24.969,3.746,2.13,75.332,10.416,14.093,1.31,NA,rigatoni and sauce
+rigatoni.jpg,0,Rigatoni: plain,158,30.86,5.8,0.93,80.47,14.353,4.927,1.58,NA,rigatoni
+ritz.jpg,1,Ritz crackers,509,60.738,8.877,25.396,49.114,7.043,43.912,5.09,NA,ritz
+roastedpotatoes.jpg,1,Roasted potato,148,20.574,1.839,7.014,54.799,3.446,41.761,1.48,NA,roastedpotatoes
+salad w chicken.jpg,1,Salad: Spicy Chicken Caesar (Wendy’s)                – no dressing,135.307,6.779,9.887,7.627,20,29.3,50.7,1.35,NA,salad w chicken
+salami.jpg,1,Salami,385,3.8,23.2,30.05,3.82,25.731,70.403,3.85,NA,salami
+salmon.jpg,1,Salmon - grilled,203,0,25.44,10.54,0,53.431,46.55,2.03,NA,salmon
+saltines.jpg,0,Saltine crackers,398,66.612,8.717,10.131,68.788,8.875,22.431,3.98,NA,saltines
+seaweed.jpg,0,Seaweed: dehydrated,136,44.4,30.7,1.5,35.683,55.079,9.232,1.36,NA,seaweed
+shreddedwheatwithmilk.jpg,0,Shredded wheat (1 biscuit) w/ 1% milk (1/2 C),89.347,16.904,4.66,1.17,68.351,20.547,11.308,0.89,NA,shreddedwheatwithmilk
+Skim milk.jpg,0,Skim milk,34,4.96,3.37,0.08,56.456,42.323,2.068,0.34,NA,Skim milk
+skittles.jpg,0,Skittles,405.643,91.7107,0,4.409917,90.2,0,9.8,4.05,NA,skittles
+soup with spoon.jpg,0,Minestrone Soup (chunky ),38,6.235,1.714,0.812,65.418,15.569,19.012,0.38,NA,soup with spoon
+sour patch.jpg,0,Sour patch kids candy,371.428,92.857,0,0,100,0,0,3.71,NA,sour patch
+soy chips.jpg,0,Soy crisps,361.103,50,27.777,5.555,55.4,30.8,13.8,3.61,NA,soy chips
+steak.jpg,1,Steak: T-bone,291,0,25.85,20.04,0,37.931,62.117,2.91,NA,steak
+strawberries.jpg,0,Strawberries,32,7.68,0.67,0.3,86.4,7.035,7.847,0.32,NA,strawberries
+string cheese.jpg,1,String cheese,302,3.83,25.96,20.03,4.908,36.705,58.299,3.02,NA,string cheese
+sunchips.jpg,1,Sun Chips,478.57,64.2857,7.1428,21.4285,53.7,6,40.3,4.78,NA,sunchips
+sushi w_condiments.jpg,0,Sushi w/ condiments,126,16.485,6.75,3.796,52.98,21.59,25.363,1.26,NA,sushi w_condiments
+swedishfish.jpg,0,Swedish Fish,360,90,0,0,100,0,0,3.6,NA,swedishfish
+sweetpotato.jpg,0,Sweet Potato,97.11,21.83,2.11,0.15,89.9,8.7,1.4,0.97,NA,sweetpotato
+tacos.jpg,1,Taco: beef (Taco Bell soft supreme) ),181,15.61,7.954,9.548,35.083,18.236,46.651,1.81,NA,tacos
+trail mix.jpg,1,Trail mix,462,44.9,13.8,29.4,35.959,10.455,53.455,4.62,NA,trail mix
+trailmix.jpg,1,Chocolate trail mix,496.5,43.33,13.33,30,34.9,10.7,54.4,4.965,NA,trailmix
+Tribe humus pita.jpg,1,Tribe hummus w/pita chips,246.817,32.564,8.5928,9.7984,53.712,12.487,33.851,2.46,NA,Tribe humus pita
+triscuits.jpg,0,Triscuit,457.142,71.4285,10.7142,14.285,62.5,9.4,28.1,4.57,NA,triscuits
+tuna.jpg,0,Tuna (white albacore in water) - Bumble Bee,92.857,0,23.214,0,0,100,0,0.92,NA,tuna
+turkey sandwich.jpg,0,Turkey on roll w/ lettuce and tomato,130.776,15.211,10.975,2.614,47.085,34.952,17.828,1.3,NA,turkey sandwich
+turkeydelimeat.jpg,0,Turkey breast - Oscar Mayer Deli Select,94.6428,3.5714,16.0714,1.7857,15.094,67.92,16.98,0.94,NA,turkeydelimeat
+turkeysandwich.jpg,0,Turkey sandwich (roll w/ lettuce and tomato),163.028,18.1585,17.4235,2.3,44.55,42.75,12.7,1.6,NA,turkeysandwich
+veggieswithdip.jpg,1,Veggies w/ ranch dip (Lays),133.46,5.8867,2.4414,11.1548,17.6,7.3,75.1,1.33,NA,veggieswithdip
+wheatbread.jpg,0,Wheat Bread - Pepperidge Farm 100% WW,265.116,46.5116,9.3023,4.6511,70.175,14.035,15.789,2.65,NA,wheatbread
+whitebread.jpg,0,White Bread - Pepperidge Farm Hearty White,273.255,51.1627,9.3023,3.4883,74.893,13.617,11.489,2.73,NA,whitebread
+Whole milk.jpg,1,Whole milk,60,4.52,3.22,3.25,30.133,21.467,48.75,0.6,NA,Whole milk
+yellow popcorn.jpg,1,Yellow popcorn,538,50.012,8.307,35.715,37.434,4.212,58.385,5.38,NA,yellow popcorn
+yellow rice_beans.jpg,0,Rice & Beans,129,25.485,5.68,0.39,81.706,15.705,2.54,1.29,NA,yellow rice_beans
+yogurt no spoon.jpg,0,Yogurt w/ granola & strawberries,129.7,21.18,3.6978,3.9275,62.952,10.853,25.975,1.29,NA,yogurt no spoon
+yogurt pretzels.jpg,1,Yogurt pretzels,451,71.732,7.97,15.55,62.623,6.931,30.439,4.51,NA,yogurt pretzels
