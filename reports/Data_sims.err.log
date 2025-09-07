@@ -36,19 +36,68 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from matplotlib import rcParams, cycler
-import matplotlib.pyplot as plt
-import numpy as np
-plt.ion()
+import pandas as pd
+import random
+# Define blocks and trial structure
+blocks = ['health', 'taste', 'choice']
+trials_per_block = 75
+participants = range(1, 41)
+
+# Generate 50 unique foods
+base_foods = [
+    'apple', 'banana', 'burger', 'carrot', 'donut', 'eggs', 'fries', 'grapes', 'ice cream', 'kale',
+    'pizza', 'yogurt', 'spinach', 'steak', 'candy', 'popcorn', 'mango', 'nuts', 'cheese', 'chicken',
+    'broccoli', 'chocolate', 'granola', 'lettuce', 'pasta', 'salmon', 'tofu', 'soda', 'rice', 'beans',
+    'cucumber', 'peach', 'bacon', 'cereal', 'toast', 'avocado', 'beef', 'peanut butter', 'cake', 'milk',
+    'watermelon', 'pear', 'turkey', 'onion rings', 'oatmeal', 'cranberries', 'syrup', 'waffles', 'cookie', 'shrimp'
+]
+assert len(base_foods) == 50
+
+
+# Assign fat and sugar levels randomly
+food_properties = {}
+for food in base_foods:
+    fat = random.choices(['high', 'low'], weights=[0.4, 0.6])[0]
+    sugar = random.choices(['high', 'low'], weights=[0.5, 0.5])[0]
+    food_properties[food] = {'fat': fat, 'sugar': sugar}
+
+# Generate trials
+all_trials = []
+
+for participant in participants:
+    for block in blocks:
+        for trial_num in range(1, trials_per_block + 1):
+            food = random.choice(base_foods)
+            rt_missing = random.random() < 0.02  # 2% chance of missing RT
+            reaction_time = None if rt_missing else round(random.uniform(0.5, 4.0), 2)
+            rating = None if reaction_time is None else random.randint(1, 10)
+
+            fat = food_properties[food]['fat']
+            sugar = food_properties[food]['sugar']
+
+            trial = {
+                'ID': participant,
+                'block': block,
+                'trial_number': trial_num,
+                'food': food,
+                'reaction_time': reaction_time,
+                'rating': rating,
+                'fat': fat,
+                'sugar': sugar
+            }
+            all_trials.append(trial)
+
+# Create DataFrame
+df = pd.DataFrame(all_trials)
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
 [31mModuleNotFoundError[39m                       Traceback (most recent call last)
 [36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mmatplotlib[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m rcParams, cycler
-[32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmatplotlib[39;00m[34;01m.[39;00m[34;01mpyplot[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mplt[39;00m
-[32m      3[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
+[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mpandas[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mpd[39;00m
+[32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mrandom[39;00m
+[32m      3[39m [38;5;66;03m# Define blocks and trial structure[39;00m
 
-[31mModuleNotFoundError[39m: No module named 'matplotlib'
+[31mModuleNotFoundError[39m: No module named 'pandas'
 

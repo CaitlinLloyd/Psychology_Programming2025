@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'python_week2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="R Markdown" href="Week1_R.html" />
+    <link rel="next" title="R Week 1" href="Week1_R.html" />
     <link rel="prev" title="Python Session 1" href="python_week1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -180,10 +180,15 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Python_basics_precourse.html">Welcome</a></li>
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="python_week1.html">Python Session 1</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Python Session 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Week1_R.html">R Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Week2_R.html">R Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week1_R.html">R Week 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week2_R.html">R Week 2</a></li>
 </ul>
 
     </div>
@@ -433,6 +438,19 @@ document.write(`
 
 <span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/CaitlinLloyd/Psychology_Programming2025/refs/heads/main/Data/demo.csv&quot;</span><span class="p">)</span>
 <span class="n">choices</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/CaitlinLloyd/Psychology_Programming2025/refs/heads/main/Data/FCT_df.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Load in our choice and demographic data</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/CaitlinLloyd/Psychology_Programming2025/refs/heads/main/Data/demo.csv&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">choices</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/CaitlinLloyd/Psychology_Programming2025/refs/heads/main/Data/FCT_df.csv&quot;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>
@@ -1765,7 +1783,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/427abb603a065cb28ea2e4d0408978859c6ff24faf5253e4d1b2d93c324d8028.png" src="_images/427abb603a065cb28ea2e4d0408978859c6ff24faf5253e4d1b2d93c324d8028.png" />
+<img alt="_images/26109fe149eee90a694b119441926f2fec85a2d9ed2e37a940f660552c79f9b7.png" src="_images/26109fe149eee90a694b119441926f2fec85a2d9ed2e37a940f660552c79f9b7.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1786,7 +1804,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 800x600 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/35a91ef6fbad2d8a0607856e45093a52bdbe1e21661cc3aad5ff81905619e7f0.png" src="_images/35a91ef6fbad2d8a0607856e45093a52bdbe1e21661cc3aad5ff81905619e7f0.png" />
+<img alt="_images/9a97bc60557d84d115e51f36e66f14eac76f79bf7c25f0714b9aa04f308fd362.png" src="_images/9a97bc60557d84d115e51f36e66f14eac76f79bf7c25f0714b9aa04f308fd362.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1814,7 +1832,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 800x600 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/58be8d10e6d63e3b9faa27c76c15419ba2ef7ceb95a6eaf0df4567ebf3ebf6c3.png" src="_images/58be8d10e6d63e3b9faa27c76c15419ba2ef7ceb95a6eaf0df4567ebf3ebf6c3.png" />
+<img alt="_images/9c321e93d680212b3cd53d6d46d38eb3c9d977bfc64ccdb83e1f463fea0b82d5.png" src="_images/9c321e93d680212b3cd53d6d46d38eb3c9d977bfc64ccdb83e1f463fea0b82d5.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3692,7 +3710,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">R Markdown</p>
+        <p class="prev-next-title">R Week 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
